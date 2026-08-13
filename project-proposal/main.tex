@@ -1,242 +1,707 @@
-\documentclass[11pt,a4paper]{article}
-\usepackage[margin=1in]{geometry}
+\documentclass[11pt]{article}
+
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage{enumitem}
-\usepackage{graphicx}
-\usepackage{xcolor}
+\usepackage{setspace}
+\usepackage{titlesec}
 
-% -----------------------------------------------------
-% bvraghav-tiet-ucs503p-article.sty
-% -----------------------------------------------------
+\setstretch{1.15}
 
-% Variable: Lab Instructor
-\makeatletter \newcommand{\BvrSetLabInstructor}[1]{%
-  \gdef\Bvr@LabInstructor{#1}}
-% default
-\newcommand{\Bvr@LabInstructor}{Dr. Raghav %
-  B. Venkataramaiyer}
-% public accessor
-\newcommand{\BvrLabInstructorValue}{\Bvr@LabInstructor}
-\makeatother
+\titleformat{\section}{\large\bfseries}{\thesection}{1em}{}
 
-% Add subtitle
-\usepackage{titling}
-% -- Set title bold
-\pretitle{\begin{center}\bfseries\fontsize{18bp}{18bp}\selectfont}
-\makeatletter
-\newcommand{\BvrSubtitle}[1]{%
-  \posttitle{%
-    \par\end{center}
-    \begin{center}\large#1\end{center}
-    \vskip 0.5em}%
-}
-\makeatother
-
-% Hints in the section title(s)
-\newcommand{\BvrHint}[1]{%
-  {\normalfont\normalsize\itshape\hfill #1}}
-
-% -----------------------------------------------------
-
-\title{Grievance-Resolution System for a Tier-2/3 City}
-
-\BvrSetLabInstructor{Dr. Raghav B. Venkataramaiyer}
-
-\BvrSubtitle{%
-  Project Proposal for UCS503P  \\
-  Submitted to: \BvrLabInstructorValue \\ \bfseries
-  Thapar Institute of Engineering and Technology% 
-}
+\title{\textbf{Intelligent Placement Assistant: \\ A Retrieval-Augmented Generation (RAG) System for Campus Recruitment Support}}
 
 \author{
-  Vidya Vaidyanathan, CSED%
-  \thanks{Roll No: \texttt{1024030xxx}, %
-    Email: \texttt{vvaidhanathan\_be24\@thapar.edu}}
-  \and 
-  Bhanurekha Ganesan, CSED%
-  \thanks{Roll No: \texttt{1024030xxx}, %
-    Email: \texttt{bganesan\_be24\@thapar.edu}}
+Oshish Madhan\\
+Department of Computer Science and Engineering\\
+Thapar Institute of Engineering and Technology\\
+Email: omadhan\_be24@thapar.edu
 }
 
 \date{\today}
 
 \begin{document}
+
 \maketitle
 
-\section{Higher-order goal%
-  \BvrHint{\ldots secondary framing}}
-This project aims to improve sustainable urban
-governance by reducing the time and effort required to
-resolve citizen issues. While the topic is broader than
-any single municipality, the immediate engineering
-objective is to translate \emph{efficient public
-  service delivery} into a measurable, deployable
-software solution.
+\begin{center}
+\textbf{Project Proposal for UCS503P}
 
-\section{Time-to-value %
-\BvrHint{\ldots primary heuristic}}
-\begin{itemize}[leftmargin=0.7cm]
-    \item We will deliver meaningful increments quickly by prototyping the core user workflow and validating it with users within a short iteration window.
-    \item We will prioritize fast feedback over perfection by using weekly iterations (and targeting CI-backed automation early) to reduce release friction.
-    \item Success is defined by what can be delivered and measured in the first iteration, then improved based on user feedback.
+\vspace{0.2cm}
+
+Submitted to:
+
+\textbf{Dr. Paramveer Sandhu}
+\end{center}
+
+\section{Higher-order Goal}
+
+Campus placement preparation requires students to search through numerous company brochures, placement notices, interview experiences, eligibility criteria, aptitude resources, resume guidelines, and technical preparation material. Most of this information exists as unstructured PDF documents distributed across different platforms, making it difficult to retrieve relevant information quickly.
+
+The primary objective of this project is to develop an intelligent AI-powered Placement Assistant that enables students to interact with placement-related documents using natural language. Instead of manually searching through hundreds of pages, students can simply ask questions and receive context-aware responses generated using Retrieval-Augmented Generation (RAG).
+
+Beyond serving as a chatbot, the proposed system aims to become a centralized knowledge platform that assists students throughout the placement process while demonstrating practical applications of modern Artificial Intelligence technologies.
+
+\section{Time-to-value}
+
+The project will follow an incremental engineering approach where useful functionality is delivered early.
+
+\begin{itemize}
+
+\item \textbf{Iteration 1:}
+Develop a basic RAG chatbot capable of answering questions from uploaded placement documents.
+
+\item \textbf{Iteration 2:}
+Implement semantic document retrieval using embeddings and a vector database.
+
+\item \textbf{Iteration 3:}
+Add Resume Analysis functionality to evaluate resumes and provide AI-generated improvement suggestions.
+
+\item \textbf{Iteration 4:}
+Develop Company Eligibility Checker and Placement Dashboard.
+
+\item \textbf{Iteration 5:}
+Optimize performance, improve retrieval quality, conduct testing, and deploy the complete application.
+
 \end{itemize}
 
+The incremental approach allows meaningful software to be demonstrated early while continuously improving system quality throughout development.
 \section{Problem Statement}
-Citizens in a tier-2/3 Indian city face delays and uncertainty when reporting local issues (e.g., streetlight outages, water leakage, garbage accumulation, road potholes). Common pain points include:
-\begin{itemize}[leftmargin=0.7cm]
-    \item \textbf{Fragmentation:} complaints are often made via multiple channels (calls, social media, paper forms), causing lost context.
-    \item \textbf{Low transparency:} citizens cannot easily see the status of their complaint (e.g., ``received'', ``assigned'', ``in progress'', ``resolved'').
-    \item \textbf{Slow coordination:} departments/field teams lack a unified, trackable workflow with clear ownership.
-    \item \textbf{Poor data quality:} duplicate or incomplete reports force rework and extend resolution time.
+
+Students preparing for campus placements often face significant challenges in accessing accurate and relevant placement-related information. Resources such as company eligibility criteria, placement brochures, previous interview experiences, aptitude preparation material, resume guidelines, and technical preparation notes are typically scattered across multiple PDF documents, emails, and online portals.
+
+The major challenges include:
+
+\begin{itemize}
+
+\item \textbf{Fragmented Information:} Placement resources are distributed across multiple sources, making retrieval time-consuming.
+
+\item \textbf{Manual Searching:} Students must manually browse lengthy documents to locate specific information.
+
+\item \textbf{Repeated Queries:} Placement coordinators repeatedly answer similar questions regarding eligibility, interview process, and company requirements.
+
+\item \textbf{Lack of Personalized Guidance:} Students often struggle to identify missing technical skills or determine whether they satisfy company eligibility requirements.
+
+\item \textbf{Resume Quality Issues:} Many resumes contain formatting mistakes, missing keywords, and weak project descriptions that reduce interview opportunities.
+
 \end{itemize}
 
-\textbf{Why this matters now (contextual relevance):} In an urban setting with limited staff bandwidth, even small process improvements can noticeably reduce resolution delays and repeated submissions.
+With increasing campus recruitment activities and growing volumes of placement documentation, manually managing this information becomes inefficient. An intelligent retrieval system capable of understanding natural language queries can significantly improve students' preparation experience while reducing repetitive administrative effort.
 
-\section{Proposed Solution %
-\BvrHint{\ldots Software Proposition}}
+\section{Proposed Solution}
+
 \subsection{Overview}
-Build a \textbf{web-based} ``Grievance-to-Resolution'' system with the following components:
-\begin{itemize}[leftmargin=0.7cm]
-    \item \textbf{Citizen submission portal:} users submit an issue with photo (optional), category, and locality/ward.
-    \item \textbf{Automated triage:} basic duplicate detection and completeness checks.
-    \item \textbf{Department workflow:} assign issues to relevant department/team and update statuses.
-    \item \textbf{Status transparency:} citizens track status and receive notifications when resolved.
-    \item \textbf{Admin/ops dashboard:} performance summaries (resolution time, backlog).
-\end{itemize}
 
-\subsection{Core workflow}
-\begin{enumerate}[leftmargin=0.7cm]
-    \item Citizen creates a complaint and receives a complaint ID immediately.
-    \item System validates completeness and suggests possible duplicates (lightweight similarity on text/category and approximate location).
-    \item Department staff update status (Received $\rightarrow$ Assigned $\rightarrow$ In Progress $\rightarrow$ Resolved).
-    \item Citizen views status updates and resolution notes.
+The proposed solution is a web-based AI Placement Assistant powered by Retrieval-Augmented Generation (RAG). The system combines semantic search with Large Language Models (LLMs) to provide accurate, context-aware responses grounded in institutional placement documents.
+
+Instead of relying solely on the knowledge of an LLM, the system first retrieves the most relevant document sections from a vector database and then uses those retrieved passages as context for answer generation. This significantly reduces hallucinations while improving factual accuracy.
+
+The system will support multiple placement-related services through a unified interface.
+
+\subsection{Core Functionalities}
+
+\begin{enumerate}
+
+\item Upload placement-related PDF documents.
+
+\item Automatically extract and preprocess document text.
+
+\item Divide documents into semantic chunks.
+
+\item Generate vector embeddings using a pre-trained embedding model.
+
+\item Store embeddings in a vector database (ChromaDB).
+
+\item Retrieve the most relevant document chunks using semantic similarity search.
+
+\item Generate grounded answers using the Gemini Large Language Model.
+
+\item Analyze student resumes and provide improvement suggestions.
+
+\item Check company eligibility based on student profile information.
+
+\item Provide interview preparation guidance using previous interview experiences and technical resources.
+
 \end{enumerate}
 
-\subsection{Operational constraints for an educational, tier-2/3 setting}
-\begin{itemize}[leftmargin=0.7cm]
-    \item Keep the solution usable on low-to-mid range devices via responsive web design.
-    \item Avoid dependence on advanced research algorithms; focus on workflow, automation, and system correctness.
-    \item Design for deployability using common web hosting and managed databases.
+\subsection{Expected Benefits}
+
+\begin{itemize}
+
+\item Faster retrieval of placement-related information.
+
+\item Reduced dependence on manual document searching.
+
+\item Accurate responses supported by institutional documents.
+
+\item Personalized preparation guidance.
+
+\item Improved resume quality.
+
+\item Better placement readiness for students.
+
 \end{itemize}
 
-\section{Solution Approach %
-\BvrHint{\ldots Engineering focus}}
-This is an engineering course project, so we focus on scalable administrative and workflow aspects rather than novel algorithm research.
+\subsection{System Workflow}
 
-\subsection{Duplicate/quality assistance %
-\BvrHint{\ldots non-research}}
-Duplicate detection will be heuristic-based:
-\begin{itemize}[leftmargin=0.7cm]
-    \item Normalize text (category + short description keywords).
-    \item Use a simple similarity measure (e.g., token overlap / TF-IDF cosine with threshold) without claiming state-of-the-art.
-    \item Show top candidate duplicates to staff for decision; never fully auto-delete or auto-reject.
-\end{itemize}
+The proposed workflow is as follows:
 
-\subsection{Web architecture %
-\BvrHint{\ldots web-based solution}}
-A typical 3-tier web architecture:
-\begin{itemize}[leftmargin=0.7cm]
-    \item \textbf{Frontend:} responsive UI for citizens and staff (status pages, submission form, dashboard).
-    \item \textbf{Backend API:} authentication, complaint submission, status transitions, assignment logic.
-    \item \textbf{Database:} store users, complaints, status history, attachments metadata.
-\end{itemize}
+\begin{enumerate}
 
-\subsection{CI/CD and fast delivery enabler}
-CI/CD will be used to:
-\begin{itemize}[leftmargin=0.7cm]
-    \item Automatically build and run tests on every change.
-    \item Produce repeatable deployment artifacts to staging.
-    \item Enable safe and frequent releases of incremental features.
-\end{itemize}
+\item Placement documents are uploaded by the administrator.
 
-\section{Evaluation Criterion %
-\BvrHint{\ldots measurable and attributable}}
-We define success using measurable metrics tied to the core workflow.
+\item The system extracts text from PDF files.
 
-\subsection{Primary evaluation metric}
-\textbf{Time-to-acknowledgement (TTA):} time between complaint submission and ``Received/Assigned'' status creation in the system.
-\begin{itemize}[leftmargin=0.7cm]
-    \item Target: median TTA $\le$ 2 hours during pilot window.
-    \item Attribution: measured from database timestamps (submission vs. first status update by staff).
-\end{itemize}
+\item Documents are divided into smaller semantic chunks.
 
-\subsection{Secondary evaluation metrics}
-\begin{itemize}[leftmargin=0.7cm]
-    \item \textbf{Resolution time reduction:} reduce time-to-resolved compared to baseline process (even if baseline is collected via survey).
-    \item \textbf{Duplicate rate:} percentage of complaints flagged as duplicates and resolved without rework.
-    \item \textbf{User clarity:} citizen-reported clarity of status using a simple 1--5 feedback question.
-    \item \textbf{Reliability:} availability of staging/production for login and submission during business hours (e.g., $\ge$ 99\% uptime in pilot).
-\end{itemize}
+\item Vector embeddings are generated for each chunk.
 
-\subsection{Pilot validation plan %
-\BvrHint{\ldots high-level}}
-\begin{itemize}[leftmargin=0.7cm]
-    \item Recruit 10--20 pilot users (citizens) and 3--5 staff roles (department simulation if real staff unavailable).
-    \item Compare metrics before/after within the iteration window by logging baseline estimates via short interviews or existing process observations.
-\end{itemize}
+\item Embeddings are stored inside ChromaDB.
 
-\section{Scalability %
-\BvrHint{\ldots with foresight}}
-The proposition should scale in both theoretical and practical senses.
+\item A student submits a natural language query.
 
-\begin{enumerate}[leftmargin=0.7cm]
-    \item \textbf{Scalable (theoretically):} The system should support growth in number of complaints and concurrent dashboard usage by:
-    \begin{itemize}[leftmargin=0.7cm]
-        \item decoupling components (frontend/backend),
-        \item enabling pagination and indexing for common queries,
-        \item using stateless API design.
-    \end{itemize}
-    
-    \item \textbf{Operationally deployable (practically):} The system should run on common web hosting:
-    \begin{itemize}[leftmargin=0.7cm]
-        \item managed database,
-        \item containerized or platform-hosted deployment,
-        \item CI/CD pipeline for staging/production.
-    \end{itemize}
+\item The query embedding is generated.
+
+\item The retriever finds the most relevant document chunks.
+
+\item Retrieved context is passed to the Gemini API.
+
+\item The Large Language Model generates an answer grounded in retrieved information.
+
+\end{enumerate}
+\section{Solution Approach}
+
+The proposed system follows a modular architecture consisting of document processing, semantic retrieval, Large Language Model (LLM) inference, and web application layers. Rather than allowing the LLM to answer directly from its pretrained knowledge, the system retrieves relevant information from placement documents before generating responses. This Retrieval-Augmented Generation (RAG) pipeline ensures that answers remain grounded in verified institutional resources.
+
+\subsection{Document Processing Pipeline}
+
+The knowledge base consists of placement-related PDF documents including company brochures, eligibility criteria, interview experiences, resume guidelines, aptitude preparation material, and technical interview notes.
+
+The preprocessing pipeline performs the following operations:
+
+\begin{enumerate}
+
+\item Upload PDF documents.
+
+\item Extract text using PDF parsers.
+
+\item Clean and normalize extracted text.
+
+\item Split documents into overlapping semantic chunks.
+
+\item Generate dense vector embeddings for each chunk.
+
+\item Store embeddings together with metadata inside ChromaDB.
+
 \end{enumerate}
 
-\section{Engine availability heuristic}
-A mature set of ``engines'' (tooling/services) is available to implement this as a web-based project:
-\begin{itemize}[leftmargin=0.7cm]
-    \item Web framework for REST APIs and templated/reactive pages.
-    \item Managed relational or document database.
-    \item Authentication approach (token-based or session-based).
-    \item Object storage for optional attachments (or local storage for pilot).
-    \item Test framework for unit/integration tests.
-    \item CI runner and staging deployment target.
-\end{itemize}
-We will use these mature components to focus on workflow design, correctness, and measurement rather than inventing new infrastructure.
+This preprocessing is performed only once for every uploaded document, allowing efficient retrieval during user interactions.
 
-\section{Project scope and deliverables %
-\BvrHint{\ldots iteration-friendly}}
-\subsection{Initial deliverable %
-\BvrHint{\ldots first iteration}}
-\begin{itemize}[leftmargin=0.7cm]
-    \item Citizen submission form + complaint ID generation
-    \item Staff workflow: update status and assignment
-    \item Citizen status page: view timeline/history
-    \item Basic logging and timestamps for TTA measurement
-    \item CI: build + backend unit tests + linting
-    \item CD to staging with a single command or pipeline job
+\subsection{Retrieval-Augmented Generation Pipeline}
+
+When a student submits a query, the system executes the following sequence:
+
+\begin{enumerate}
+
+\item Convert the user query into an embedding.
+
+\item Perform semantic similarity search within the vector database.
+
+\item Retrieve the Top-K most relevant document chunks.
+
+\item Construct an augmented prompt using the retrieved context.
+
+\item Send the prompt to the Gemini Large Language Model.
+
+\item Generate a grounded response based only on the retrieved information.
+
+\item Display the answer together with the supporting document references.
+
+\end{enumerate}
+
+This architecture significantly reduces hallucinations and improves factual consistency compared to conventional chatbot systems.
+
+\subsection{Resume Analysis Module}
+
+The Resume Analysis module allows students to upload resumes in PDF format.
+
+The system performs:
+
+\begin{itemize}
+
+\item Resume parsing.
+
+\item Skill extraction.
+
+\item Keyword matching.
+
+\item Project evaluation.
+
+\item Technical skill recommendations.
+
+\item Resume improvement suggestions using Gemini.
+
 \end{itemize}
 
-\subsection{Subsequent deliverables}
-\begin{itemize}[leftmargin=0.7cm]
-    \item Lightweight duplicate suggestions with staff review
-    \item Notification layer (email/SMS optional in later iteration; can start with in-app notifications)
-    \item Admin dashboard for metrics and backlog
-    \item Improved search/filtering and indexed queries for scale readiness
+This module assists students in improving resume quality before placement applications.
+
+\subsection{Company Eligibility Checker}
+
+Students enter their academic profile including:
+
+\begin{itemize}
+
+\item CGPA
+
+\item Branch
+
+\item Current semester
+
+\item Number of backlogs
+
+\item Technical skills
+
 \end{itemize}
 
-\section{Risks and mitigations}
-\begin{itemize}[leftmargin=0.7cm]
-    \item \textbf{Data privacy / consent:} minimize collected data; keep attachments optional; store only what is needed.
-    \item \textbf{Staff adoption:} provide an easy UI for status updates; keep workflow steps minimal; include shortcuts.
-    \item \textbf{Evaluation measurement ambiguity:} instrument timestamps and define clear status transitions before development begins.
-    \item \textbf{Operational issues in pilot:} use staging early; ensure CI/CD produces repeatable deployments.
+The system compares these details with company eligibility criteria extracted from placement documents and determines whether the student satisfies the requirements.
+
+\subsection{Technology Stack}
+
+The proposed software stack is shown below.
+
+\begin{center}
+
+\begin{tabular}{|l|l|}
+\hline
+Frontend & Streamlit \\ \hline
+Backend & FastAPI \\ \hline
+Programming Language & Python \\ \hline
+LLM & Google Gemini API \\ \hline
+Embeddings & Sentence Transformers \\ \hline
+Vector Database & ChromaDB \\ \hline
+Framework & LangChain \\ \hline
+Database & SQLite / PostgreSQL \\ \hline
+Version Control & Git and GitHub \\ \hline
+Deployment & Render / Railway \\ \hline
+
+\end{tabular}
+
+\end{center}
+
+\subsection{System Architecture}
+
+The system follows a layered architecture.
+
+\begin{verbatim}
+
+                    Placement PDFs
+                           |
+                           |
+                    Text Extraction
+                           |
+                           |
+                     Text Chunking
+                           |
+                           |
+                Sentence Embeddings
+                           |
+                           |
+                     ChromaDB Storage
+                           |
+                  -------------------
+                  |                 |
+             User Query         Resume Upload
+                  |                 |
+             Query Embedding    Resume Parser
+                  |                 |
+            Similarity Search       |
+                  |                 |
+          Relevant Document Chunks  |
+                  |                 |
+                  ------Prompt-------
+                           |
+                      Gemini LLM
+                           |
+                     Final Response
+                           |
+                    Streamlit Interface
+
+\end{verbatim}
+
+\subsection{Software Engineering Considerations}
+
+The project follows modular software engineering principles.
+
+\begin{itemize}
+
+\item Separation of frontend, backend, retrieval, and AI modules.
+
+\item Reusable service-oriented architecture.
+
+\item RESTful API communication.
+
+\item Version control using Git.
+
+\item Modular code organization.
+
+\item Error handling and logging.
+
+\item Scalable vector database design.
+
+\item Easy integration of additional placement documents.
+
+\end{itemize}
+\section{Evaluation Criteria}
+
+The success of the proposed AI Placement Assistant will be evaluated using measurable software engineering and Artificial Intelligence metrics.
+
+\subsection{Primary Evaluation Metrics}
+
+\begin{itemize}
+
+\item \textbf{Retrieval Accuracy}
+
+Measure whether the retrieved document chunks are relevant to the user's query.
+
+Target:
+\begin{itemize}
+\item Top-3 retrieval accuracy greater than 90\%.
 \end{itemize}
 
-\section{Summary}
-This project proposes a deployable web platform to reduce grievance handling delays in a tier-2/3 city context. It meets the course criteria by emphasizing time-to-value through rapid iterations, implementing CI/CD to support frequent safe releases, and using measurable evaluation criteria (especially time-to-acknowledgement). It remains focused on engineering workflow and scalability readiness rather than research-driven novelty.
+\item \textbf{Response Relevance}
+
+Evaluate whether the generated answer correctly addresses the user's question using retrieved context.
+
+Target:
+\begin{itemize}
+\item Average user rating above 4/5.
+\end{itemize}
+
+\item \textbf{Response Time}
+
+Measure the end-to-end latency from query submission to answer generation.
+
+Target:
+\begin{itemize}
+\item Less than 3 seconds for normal queries.
+\end{itemize}
+
+\end{itemize}
+
+\subsection{Secondary Evaluation Metrics}
+
+\begin{itemize}
+
+\item Resume analysis accuracy.
+
+\item Company eligibility prediction correctness.
+
+\item Number of successfully processed documents.
+
+\item Number of supported concurrent users.
+
+\item API reliability.
+
+\item User satisfaction survey.
+
+\item Percentage reduction in manual searching time.
+
+\end{itemize}
+
+\subsection{Testing Strategy}
+
+The system will be validated using multiple testing approaches.
+
+\begin{itemize}
+
+\item Unit Testing
+
+Each module including document parser, embedding generator, retriever, and backend API will be tested independently.
+
+\item Integration Testing
+
+Validate communication between frontend, backend, vector database, and Gemini API.
+
+\item Functional Testing
+
+Verify that all major user functionalities work correctly.
+
+\item Performance Testing
+
+Evaluate response latency under multiple simultaneous requests.
+
+\item User Acceptance Testing
+
+Students will interact with the application and provide feedback regarding usability and response quality.
+
+\end{itemize}
+
+\section{Scalability}
+
+The proposed architecture has been designed to accommodate future expansion without major architectural modifications.
+
+\subsection{Scalable Knowledge Base}
+
+New placement documents can be uploaded at any time.
+
+The embedding pipeline automatically indexes the newly uploaded documents without affecting existing knowledge.
+
+\subsection{Modular Architecture}
+
+The frontend, backend, retrieval engine, and AI components remain independent modules.
+
+This allows future upgrades with minimal changes.
+
+\subsection{Database Scalability}
+
+Although ChromaDB will initially store embeddings locally, the system can later migrate to production-grade vector databases such as Pinecone, Weaviate, or Milvus without changing the application logic.
+
+\subsection{Deployment Scalability}
+
+The application can be deployed using Docker containers and hosted on cloud platforms including Render, Railway, AWS, or Microsoft Azure.
+
+\section{Software Engineering Practices}
+
+The project follows modern software engineering principles.
+
+\begin{itemize}
+
+\item Modular project structure.
+
+\item Object-oriented programming.
+
+\item REST API architecture.
+
+\item Git-based version control.
+
+\item Continuous Integration using GitHub Actions.
+
+\item Automated testing.
+
+\item Documentation using Markdown.
+
+\item Exception handling and logging.
+
+\item Configuration management using environment variables.
+
+\end{itemize}
+
+\section{Project Deliverables}
+
+\subsection{Phase 1}
+
+\begin{itemize}
+
+\item Document upload functionality.
+
+\item PDF preprocessing.
+
+\item Semantic chunk generation.
+
+\item ChromaDB integration.
+
+\item Basic RAG chatbot.
+
+\end{itemize}
+
+\subsection{Phase 2}
+
+\begin{itemize}
+
+\item Resume Analysis module.
+
+\item Company Eligibility Checker.
+
+\item Placement dashboard.
+
+\item Student profile management.
+
+\end{itemize}
+
+\subsection{Phase 3}
+
+\begin{itemize}
+
+\item Admin panel.
+
+\item Deployment.
+
+\item Performance optimization.
+
+\item User authentication.
+
+\item Complete project documentation.
+
+\end{itemize}
+
+\section{CI/CD and Deployment}
+
+To ensure maintainability and continuous development, the project will use a basic CI/CD pipeline.
+
+\begin{itemize}
+
+\item Source code hosted on GitHub.
+
+\item Automated testing using GitHub Actions.
+
+\item Automatic deployment after successful builds.
+
+\item Docker containerization.
+
+\item Cloud deployment on Render or Railway.
+
+\end{itemize}
+\section{Risks and Mitigation}
+
+Although the proposed system is technically feasible, several challenges may arise during development and deployment. Appropriate mitigation strategies will be adopted to minimize these risks.
+
+\subsection{Potential Risks}
+
+\begin{itemize}
+
+\item \textbf{Hallucination by Large Language Models}
+
+Even with Retrieval-Augmented Generation, the language model may occasionally generate responses that are not completely supported by the retrieved documents.
+
+\textbf{Mitigation:}
+Only the retrieved document chunks will be provided as context to the LLM. Source references will also be displayed alongside generated responses.
+
+\vspace{0.2cm}
+
+\item \textbf{Poor Quality Documents}
+
+Scanned or poorly formatted PDF documents may reduce retrieval accuracy.
+
+\textbf{Mitigation:}
+Document preprocessing, text cleaning, and OCR techniques will be applied whenever necessary.
+
+\vspace{0.2cm}
+
+\item \textbf{Embedding Quality}
+
+Semantic retrieval depends on the quality of document embeddings.
+
+\textbf{Mitigation:}
+Well-established Sentence Transformer embedding models will be used, and chunk sizes will be experimentally optimized.
+
+\vspace{0.2cm}
+
+\item \textbf{API Availability}
+
+Cloud-based LLM APIs may become unavailable or exceed usage quotas.
+
+\textbf{Mitigation:}
+API errors will be handled gracefully, and cached retrieval results will be maintained wherever possible.
+
+\vspace{0.2cm}
+
+\item \textbf{Scalability}
+
+As the number of placement documents increases, retrieval latency may increase.
+
+\textbf{Mitigation:}
+Efficient vector indexing techniques and scalable vector databases can be adopted in future deployments.
+
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Future Scope}
+
+Although the initial implementation focuses on campus placements, the proposed architecture can be extended significantly.
+
+Future improvements include:
+
+\begin{itemize}
+
+\item Voice-based interaction using Speech-to-Text.
+
+\item Multilingual support for placement documents.
+
+\item OCR support for scanned PDFs.
+
+\item Hybrid Retrieval (BM25 + Dense Retrieval).
+
+\item Cross-Encoder Re-ranking for improved retrieval quality.
+
+\item Personalized preparation roadmaps.
+
+\item Interview scheduling assistant.
+
+\item AI-generated mock interviews.
+
+\item Integration with university placement portals.
+
+\item Mobile application support.
+
+\item Analytics dashboard for placement officers.
+
+\item Agentic AI workflows for automated placement assistance.
+
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Expected Outcomes}
+
+Upon successful completion of the project, the following outcomes are expected:
+
+\begin{itemize}
+
+\item A fully functional AI-powered Placement Assistant.
+
+\item Accurate retrieval of placement-related information using Retrieval-Augmented Generation.
+
+\item Intelligent resume analysis with AI-generated suggestions.
+
+\item Automated company eligibility verification.
+
+\item Reduced time required to search placement resources.
+
+\item Improved placement preparation experience for students.
+
+\item Demonstration of modern AI Engineering concepts including vector databases, embeddings, semantic search, and Large Language Models.
+
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Conclusion}
+
+This project proposes the development of an Intelligent Placement Assistant that leverages Retrieval-Augmented Generation (RAG) to improve the accessibility and usability of campus placement resources.
+
+Unlike conventional chatbots, the proposed system generates responses grounded in verified institutional documents through semantic retrieval, thereby improving reliability and reducing hallucinations. The solution integrates modern AI technologies including vector databases, embedding models, Large Language Models, and scalable web services within a modular software engineering architecture.
+
+Beyond serving as an academic project, the proposed system has the potential to become a practical deployment for educational institutions by simplifying placement preparation, reducing repetitive administrative effort, and providing students with personalized guidance throughout the recruitment process.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{thebibliography}{9}
+
+\bibitem{langchain}
+LangChain Documentation.
+Available: \url{https://python.langchain.com}
+
+\bibitem{chromadb}
+ChromaDB Documentation.
+Available: \url{https://docs.trychroma.com}
+
+\bibitem{gemini}
+Google AI Studio.
+Available: \url{https://ai.google.dev}
+
+\bibitem{sentence}
+Reimers, N., and Gurevych, I.,
+``Sentence-BERT: Sentence Embeddings using Siamese BERT Networks,''
+EMNLP, 2019.
+
+\bibitem{rag}
+Lewis, Patrick et al.,
+``Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks,''
+NeurIPS, 2020.
+
+\end{thebibliography}
 
 \end{document}
