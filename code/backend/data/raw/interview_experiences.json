@@ -1,0 +1,1668 @@
+[
+  {
+    "role_id": "software",
+    "batch": "2027",
+    "company_name": "Eli Lilly & Company",
+    "official_role": "Tech Intern",
+    "publishedAt": "2026-09-23T10:43:17.243Z",
+    "company_id": "eli-lilly-company",
+    "overall": "",
+    "advice": "",
+    "hiring_mode": "On-Campus",
+    "funnel": "180 -> 80 -> 42 offers",
+    "role_name": "Software",
+    "outcome": "Offer received",
+    "process_summary": "OA + interview",
+    "sections": [
+      {
+        "fields": [
+          {
+            "id": "f1",
+            "label": "Panel",
+            "value": "1 interviewer"
+          },
+          {
+            "value": "10-15 minutes, no live coding and purely conversational based",
+            "label": "Duration & Format",
+            "id": "f2"
+          },
+          {
+            "label": "HR & CV Questions",
+            "id": "f3",
+            "value": "Tell me about your internship experience."
+          }
+        ],
+        "kind": "interview",
+        "title": "Interview Round 1",
+        "id": "s1"
+      }
+    ],
+    "id": "04e9z4oan0Lh7IcBD7kb"
+  },
+  {
+    "role_name": "Consulting",
+    "funnel": "",
+    "hiring_mode": "On-Campus",
+    "official_role": "Consultant Intern",
+    "process_summary": "OA + Technical PI + GD + Debate + Panel Interview",
+    "outcome": "Offer received",
+    "publishedAt": "2026-09-03T18:50:25.885Z",
+    "sections": [
+      {
+        "fields": [
+          {
+            "label": "Format & Duration",
+            "id": "f1",
+            "value": "Offline test with a room full of invigilators, 60 minutes, 30 questions (approx)"
+          },
+          {
+            "label": "Types of Questions Asked",
+            "id": "f2",
+            "value": "Aptitude Questions (logical, coding-decoding, syllogism, quantitative). OOPS was also asked a lot, but both types of questions were easy to moderate (can be solved without any practice)."
+          },
+          {
+            "label": "Questions Asked",
+            "id": "f3",
+            "value": "2 trains approaching each other at some given speed and distance, will they collide after this time? Explain encapsulation. Some questions on private, public, protected constructor. Questions on overloading were asked a lot. OOPS questions asked were all basic level."
+          }
+        ],
+        "id": "s1",
+        "kind": "oa",
+        "title": "Written Test / Online Assessment"
+      },
+      {
+        "kind": "gd",
+        "id": "s2",
+        "title": "Group Discussion + Debate",
+        "fields": [
+          {
+            "value": "1-2",
+            "label": "Number of People on Panel",
+            "id": "f1"
+          },
+          {
+            "id": "f2",
+            "value": "Zombie Apocalypse: what three things to carry with you all the time was to be discussed (weapons not allowed) (30 min GD went). Try to put as many points as possible but not vague points, mediate as much as you can, try to conclude.\nFor Debate, the topic was: calling vs texting (the catch was, the team was decided, side to debate was decided but at the last moment they switched the sides to debate, they were trying to see how easily you adapt to the change).\nThings to take care of: Try speaking as much as you want. If someone in your team isn't speaking that much, try asking them to put his/her points on the table and try to work it out as a team.\nDo dominate the other side but in a good way such that they don't have a comeback for it.",
+            "label": "Topic(s) Given"
+          }
+        ]
+      },
+      {
+        "id": "s3",
+        "title": "PI Round 1",
+        "kind": "interview",
+        "fields": [
+          {
+            "label": "Number of People on Panel",
+            "value": "1",
+            "id": "f1"
+          },
+          {
+            "value": "30 min",
+            "id": "f2",
+            "label": "Duration & Format"
+          },
+          {
+            "value": "Technical",
+            "label": "Technical/Domain & Case-Based Questions",
+            "id": "f3"
+          },
+          {
+            "value": "Resume-based questions (mainly project) DSA: 2 questions (\nQ1. Approach of how will you find the first non-repeating character in a string)\nSince the company also had a finance background, and I had the elective of finance, a few questions on finance were also asked (Derivatives of all types, differentiate between call and put options, how hedging works?)\nSQL theoretical questions (differentiate between outer and inner join) solve via example.\nNormal chitchat happened regarding how cmart work happens, what they actually do. Try studying ETRM platforms and how/what cmart does with it.",
+            "label": "HR & Guesstimate Questions, & CV/Resume-Based Questions",
+            "id": "f4"
+          },
+          {
+            "id": "f5",
+            "value": "DSA Resume Projects (must).",
+            "label": "Cross-Questioning & Areas of Focus"
+          }
+        ]
+      },
+      {
+        "kind": "interview",
+        "title": "Panel Interview",
+        "fields": [
+          {
+            "label": "Number of People on Panel",
+            "id": "f1",
+            "value": "4"
+          },
+          {
+            "label": "Duration & Format",
+            "id": "f2",
+            "value": "45-50 min"
+          },
+          {
+            "label": "Technical/Domain & Case-Based Questions",
+            "id": "f3",
+            "value": "Situational Questions + HR"
+          },
+          {
+            "value": "Different situations were given, they were just trying to see whether you are a good fit or not, how you are handling pressure and personality check basically.\nQuestions asked:\n- If a senior gave you work which is technically wrong, what will you do?\n- If you are being harassed sexually either by your senior, client, or teammate, what approach will you take?\nFollow-up question: the same situation is happening with some other colleague of yours and you got to know but she/he doesn't want anyone to find out (basically they are scared), what will you do?\n- Since you are in sports, what skill will make you worthy of this role?\n- You have 2 decisions that you can take: from 1 you will make the company loss and from 2 you are basically throwing your teammates under the bus situation? What will you do?\nThings to remember: 1. Always stay calm, they will try to provoke you saying we aren't satisfied, you aren't looking genuine. The key is to smile throughout the interview and answer whatever you feel like is. Trust your gut.",
+            "id": "f4",
+            "label": "HR & Guesstimate Questions, & CV/Resume-Based Questions"
+          },
+          {
+            "label": "Cross-Questioning & Areas of Focus",
+            "id": "f5",
+            "value": "Situations cross-questioning only"
+          }
+        ],
+        "id": "s4"
+      }
+    ],
+    "overall": "The entire interview process spanned two days, and honestly, both days were a mix of excitement, anxiety, and exhaustion. We would report to the placement cell around 9 AM and often stay there until 8-9 PM, waiting for our turns and the results of each round.\nThe actual interviews, however, were surprisingly comfortable. The interviewers were very chill and welcoming. They didn't just focus on what was written on my resume; they took the time to interact with me and understand who I was beyond the papers.\nThe process itself was quite smooth, but the waiting between rounds - constantly wondering whether I'd make it to the next one - was what made the experience so memorable.\nIt was my first-ever technical interview and my first in-person interview at CILP, and getting selected on my very first attempt made the whole experience feel almost unreal - honestly, like a movie.\nThe two days were tiring and definitely anxious, but in the end, the result made every bit of it worth it.",
+    "batch": "2027",
+    "company_id": "MiLRvAkjp13WWC2PWHml",
+    "advice": "",
+    "role_id": "consulting",
+    "company_name": "CMart Solutions",
+    "id": "ASFSfkIgUOpbUXAm6RVk"
+  },
+  {
+    "publishedAt": "2026-09-23T10:42:20.469Z",
+    "hiring_mode": "On-Campus",
+    "overall": "",
+    "advice": "Pay attention to digital and study some extra concepts like clock gating, power gating, clock domain crossing, assertions coverage, and UVM for an extra edge.",
+    "role_name": "Hardware/Embedded",
+    "process_summary": "OA + Technical PI 1 + Technical PI 2 + HR",
+    "company_id": "silicon-labs",
+    "official_role": "Verification Engineer Intern",
+    "role_id": "hardware-embedded",
+    "outcome": "Offer received",
+    "company_name": "Silicon Labs",
+    "sections": [
+      {
+        "fields": [
+          {
+            "label": "Format & Duration",
+            "id": "f1",
+            "value": "Online, 90 minutes"
+          },
+          {
+            "value": "All hardware questions from core subjects and STA.",
+            "label": "Types of Questions",
+            "id": "f2"
+          },
+          {
+            "id": "f3",
+            "value": "Good enough score and 9+ CG cut.",
+            "label": "Result / Cutoff"
+          }
+        ],
+        "title": "Online Assessment",
+        "kind": "oa",
+        "id": "s1"
+      },
+      {
+        "title": "Interview Round 1",
+        "fields": [
+          {
+            "label": "Panel",
+            "id": "f1",
+            "value": "1 interviewer"
+          },
+          {
+            "label": "Duration & Format",
+            "id": "f2",
+            "value": "75 minutes"
+          },
+          {
+            "id": "f3",
+            "label": "Technical & Case Questions",
+            "value": "Semaphore, mailbox, testbench architecture of SV, virtual functions, OOPS and SV, UVM, assertions, and coverage."
+          }
+        ],
+        "id": "s2",
+        "kind": "interview"
+      },
+      {
+        "id": "s3",
+        "title": "Interview Round 2",
+        "fields": [
+          {
+            "label": "Panel",
+            "id": "f1",
+            "value": "1 interviewer"
+          },
+          {
+            "value": "60-75 minutes",
+            "id": "f2",
+            "label": "Duration & Format"
+          },
+          {
+            "label": "Technical & Case Questions",
+            "id": "f3",
+            "value": "Deep grilling on resume, cache vs. main memory, non-blocking and blocking question solving, CDC, power gating, clock gating, STA question solving included clock skew, etc."
+          }
+        ],
+        "kind": "interview"
+      },
+      {
+        "fields": [
+          {
+            "id": "f1",
+            "value": "HR",
+            "label": "Panel"
+          },
+          {
+            "label": "Duration & Format",
+            "id": "f2",
+            "value": "10-15 minutes"
+          },
+          {
+            "label": "HR & CV Questions",
+            "id": "f3",
+            "value": "Can you relocate? Why are you not pursuing a master's? Overall feedback of interviews."
+          }
+        ],
+        "title": "Interview Round 3",
+        "id": "s4",
+        "kind": "interview"
+      }
+    ],
+    "funnel": "160 -> 30 -> 11 -> 3",
+    "batch": "2027",
+    "id": "FjKOBByopE5MYUMNV8lV"
+  },
+  {
+    "role_name": "AI/ML",
+    "company_id": "smart-energy-water",
+    "advice": "Be confident while giving the answers. If they ask you to write a code or anything on paper, tell them at every step what you are thinking or what approach you are trying to follow.\nAlso, do not waste the last part of the interview, which is when they ask if you have any questions. Always ask 1 or 2 questions.",
+    "outcome": "Offer received",
+    "sections": [
+      {
+        "id": "s1",
+        "title": "Online Assessment",
+        "fields": [
+          {
+            "label": "Format & Duration",
+            "value": "50 mins",
+            "id": "f1"
+          },
+          {
+            "label": "Types of Questions",
+            "id": "f2",
+            "value": "Tech (OOPS, DBMS, C++, PYTHON) + Aptitude"
+          }
+        ],
+        "kind": "oa"
+      },
+      {
+        "kind": "interview",
+        "fields": [
+          {
+            "id": "f1",
+            "label": "Panel",
+            "value": "Panel 5"
+          },
+          {
+            "label": "Duration & Format",
+            "id": "f2",
+            "value": "20-25 mins"
+          },
+          {
+            "label": "Technical & Case Questions",
+            "id": "f3",
+            "value": "Asked a DSA problem (code for Fibonacci and complexity).\nWhat are access modifiers?\nExplain public, private, protected?\nWhat is indexing (in SQL)?\nProject explanation?\nWhat do you mean by normalization and its types?"
+          },
+          {
+            "label": "HR & CV Questions",
+            "id": "f4",
+            "value": "What recent challenge have you faced?"
+          }
+        ],
+        "id": "s2",
+        "title": "Interview Round 1"
+      }
+    ],
+    "hiring_mode": "Off-Campus",
+    "publishedAt": "2026-09-23T10:43:48.914Z",
+    "batch": "2027",
+    "overall": "Before going inside to give the interview, the process made me very anxious. I even fumbled in my introduction, but they tried to test how I behave in stressful situations and whether I am confident or not.",
+    "process_summary": "OA+INTERVIEW",
+    "funnel": "600->200->60",
+    "role_id": "ai-ml",
+    "official_role": "",
+    "company_name": "Smart Energy Water",
+    "id": "SlSYXXWhaZmG50PsjUSg"
+  },
+  {
+    "role_id": "software",
+    "process_summary": "OA x2 + Machine Coding Round with PI + Vibe Coding Round with PI",
+    "company_id": "increff",
+    "advice": "Learn System Design thoroughly, not just theory but even coding complete systems if you are targeting Increff SDE role. Don't stress too much on DSA looking at the SDE role.",
+    "company_name": "Increff",
+    "overall": "It was different from others, very, very different, live coding test and that too Machine Coding Round",
+    "official_role": "SDE-1",
+    "publishedAt": "2026-09-23T10:43:24.664Z",
+    "funnel": "800 -> 250 -> 50 -> 8 -> 3 offer",
+    "batch": "2027",
+    "hiring_mode": "On-Campus",
+    "role_name": "Software",
+    "sections": [
+      {
+        "id": "s1",
+        "kind": "oa",
+        "title": "Online Assessment",
+        "fields": [
+          {
+            "label": "Format & Duration",
+            "value": "In TIET Labs, Behavioral Assessment (Predictive Index) + Cognitive Assessment, BA was untimed, Cognitive was 12 minutes, 50 questions",
+            "id": "f1"
+          },
+          {
+            "value": "Aptitude and Logical Reasoning Questions",
+            "id": "f2",
+            "label": "Types of Questions"
+          },
+          {
+            "id": "f3",
+            "value": "8.5 CG cut post this round, 250 students advanced",
+            "label": "Result / Cutoff"
+          }
+        ]
+      },
+      {
+        "id": "s2",
+        "kind": "oa",
+        "fields": [
+          {
+            "value": "100 MCQ Questions, HackerRank, 90 minutes, TIET Labs",
+            "label": "Format & Duration",
+            "id": "f1"
+          },
+          {
+            "id": "f2",
+            "label": "Types of Questions",
+            "value": "Aptitude Questions, CS Fundamentals (OS, DBMS, SQL, OOPs, CN, DSA (Easy, Medium, Hard)), ALL MCQs"
+          },
+          {
+            "value": "49 students advanced",
+            "label": "Result / Cutoff",
+            "id": "f3"
+          }
+        ],
+        "title": "Online Assessment"
+      },
+      {
+        "kind": "interview",
+        "title": "Interview Round 1 (System Design Machine Coding Round 1)",
+        "fields": [
+          {
+            "id": "f1",
+            "value": "180 minutes, Live Machine Coding, TIET Labs",
+            "label": "Duration & Format"
+          },
+          {
+            "label": "Technical & Case Questions",
+            "value": "Had to build a CLI-based Warehouse Management System from scratch employing all Object-Oriented Programming Concepts, had the liberty of coding it in any language. The people from HR kept on coming to the seat to ask questions about the code that was being written by us and also asked questions from the resume and CS Fundamentals and GenAI. At last, when the round was done, each one was evaluated individually by a single person from their HR team to see the working of the backend.",
+            "id": "f2"
+          },
+          {
+            "id": "f3",
+            "label": "Cross-questioning & Focus Areas",
+            "value": "Working of the code"
+          }
+        ],
+        "id": "s3"
+      },
+      {
+        "fields": [
+          {
+            "label": "Panel",
+            "value": "This was an extension of the previous round and we had access to all the AI tools we wanted to use. We had to make the code which we made in the previous round more robust, build a frontend around it using APIs and involve memory for the warehouse system using Database Systems.",
+            "id": "f1"
+          },
+          {
+            "id": "f2",
+            "label": "Duration & Format",
+            "value": "1 hour, Live Coding, followed by a final one-on-one interview"
+          },
+          {
+            "value": "Quality of code, how the code was done and the explanation of the code, CS Fundamentals, Prompt Engineering Fundamentals, Resume Explanation, Database Fundamentals",
+            "id": "f3",
+            "label": "Cross-questioning & Focus Areas"
+          }
+        ],
+        "id": "s4",
+        "title": "Interview Round 2 (System Design Machine Coding Round 2)",
+        "kind": "interview"
+      }
+    ],
+    "outcome": "Offer received",
+    "id": "TjaXmofO8Aj9ROCJjBT5"
+  },
+  {
+    "hiring_mode": "On-Campus",
+    "company_name": "Bain",
+    "role_id": "get-trainee",
+    "advice": "",
+    "publishedAt": "2026-09-03T18:52:36.590Z",
+    "overall": "",
+    "batch": "2027",
+    "official_role": "",
+    "funnel": "",
+    "sections": [
+      {
+        "title": "Written Test / Online Assessment",
+        "kind": "oa",
+        "fields": [
+          {
+            "value": "Online, proctored, 45 minutes; 20 questions",
+            "label": "Format & Duration",
+            "id": "f1"
+          },
+          {
+            "id": "f2",
+            "label": "Types of Questions Asked",
+            "value": "Quantitative Aptitude, Logical Reasoning, Statistics"
+          },
+          {
+            "id": "f3",
+            "label": "Questions Asked",
+            "value": "- Milk and water replacement: x liters of milk; 4 liters are removed and replaced with water twice. After the second replacement, the ratio of milk to water is 8:19. Find the original quantity of milk.\n- Calendar: If a person was born on a Tuesday, on what day will their birthday fall after 20 years?\n- Combinations: From 5 men and 7 women, choose 4 people, exactly 2 men and 2 women, with one particular man and one particular woman never together.\n- Arrangements: Arrange digits 0-9 such that there are always two digits between 1 and 2. Find the number of arrangements.\n- Statistics: If the p-value is 0.03, what does it mean?"
+          }
+        ],
+        "id": "s1"
+      },
+      {
+        "id": "s2",
+        "kind": "interview",
+        "title": "PI Round 1",
+        "fields": [
+          {
+            "value": "1",
+            "id": "f1",
+            "label": "Number of People on Panel"
+          },
+          {
+            "value": "Approximately 35 minutes; interview included a guesstimate and HR/CV-based questions",
+            "id": "f2",
+            "label": "Duration & Format"
+          },
+          {
+            "value": "Estimate the annual market size of badminton rackets in India.\nApproach: Divided India's population into age groups and excluded the very young and older population. Estimated the relevant population at around 80%, with four age groups of roughly 20% each. Estimated the proportion interested in sports, then the proportion interested in badminton, and finally the proportion of badminton players who would buy rackets.",
+            "label": "Technical/Domain & Case-Based Questions",
+            "id": "f3"
+          },
+          {
+            "value": "- Tell me about yourself / Introduction.\n- What did you do during your internship?\n- Tell me about the project you mentioned.\n- What exactly did you do in the project?\n- What was the structure of the project?\n- What were some insights from the project?\n- What were your key learnings from the internship?\n- Why consulting?\n- Do you know the difference between Bain and BCG?\n- What extracurricular activities do you do?\nUnexpected/Challenging Questions: None recalled.",
+            "id": "f4",
+            "label": "HR & Guesstimate Questions, & CV/Resume-Based Questions"
+          },
+          {
+            "id": "f5",
+            "value": "The interviewer mainly questioned the assumptions in the guesstimate, such as why particular percentages were assumed.",
+            "label": "Cross-Questioning & Areas of Focus"
+          }
+        ]
+      },
+      {
+        "id": "s3",
+        "title": "PI Round 2",
+        "fields": [
+          {
+            "label": "Number of People on Panel",
+            "id": "f1",
+            "value": "1"
+          },
+          {
+            "id": "f2",
+            "label": "Duration & Format",
+            "value": "Approximately 40 minutes; case-study based with HR/CV questions similar to Round 1"
+          },
+          {
+            "value": "- Why is India's digital UPI/Aadhaar market not increasing despite India having a large youth population and many bank accounts compared with other countries?\n- What do you think are the reasons behind this?\n- Given a table with year, number of transactions, transaction amount, and number of unique users, identify insights and conclusions.\n- Do regional differences affect UPI adoption?\n- Given regional data for Central, North, South, East, and West, as well as rural/urban distribution, why might the East have the lowest UPI adoption?",
+            "id": "f3",
+            "label": "Technical/Domain & Case-Based Questions"
+          },
+          {
+            "value": "Broadly similar to Round 1.\nUnexpected/Challenging Questions: None recalled.",
+            "id": "f4",
+            "label": "HR & Guesstimate Questions, & CV/Resume-Based Questions"
+          },
+          {
+            "label": "Cross-Questioning & Areas of Focus",
+            "id": "f5",
+            "value": "The interviewer asked follow-up questions to justify assumptions. For example, if infrastructure was given as a reason for lower UPI adoption, the interviewer asked why infrastructure was considered a reason."
+          }
+        ],
+        "kind": "interview"
+      }
+    ],
+    "company_id": "bain",
+    "process_summary": "OA + PI Round 1 + PI Round 2",
+    "outcome": "",
+    "role_name": "GET/Trainee",
+    "id": "XTJn1tLx2qcq4ijmn1XO"
+  },
+  {
+    "funnel": "",
+    "batch": "2027",
+    "outcome": "",
+    "company_id": "procdna",
+    "overall": "",
+    "process_summary": "OA + Case study + Technical PI + Fit round (HR)",
+    "official_role": "Business Analyst",
+    "hiring_mode": "On-Campus",
+    "advice": "",
+    "publishedAt": "2026-09-03T18:51:06.709Z",
+    "role_id": "business-analyst",
+    "role_name": "Business Analyst",
+    "sections": [
+      {
+        "title": "Written Test / Online Assessment",
+        "id": "s1",
+        "kind": "oa",
+        "fields": [
+          {
+            "label": "Format & Duration",
+            "id": "f1",
+            "value": "An online, proctored test of 60 minutes"
+          },
+          {
+            "value": "Consisting of 60 aptitude questions covering verbal ability, non-verbal reasoning, and arithmetic.",
+            "label": "Types of Questions Asked",
+            "id": "f2"
+          },
+          {
+            "id": "f3",
+            "label": "Questions Asked",
+            "value": "Elementary school mathematics questions such as percentage, ratio, time and distance, and average, and verbal such as English paragraphs were given and had to be answered by reading, and non-verbal such as mirror images, etc."
+          }
+        ]
+      },
+      {
+        "kind": "gd",
+        "title": "Case Study Round",
+        "id": "s2",
+        "fields": [
+          {
+            "value": "Offline pen and paper test; no panel was present. Whoever gave good answers on the case study proceeded to the technical interview where the case study was discussed further, and the panel had 1 person.",
+            "id": "f1",
+            "label": "Format & Panel"
+          },
+          {
+            "value": "It was an analysis between different customer types giving revenue per quarter, per year, and lots of data was given. We had to analyze and give answers based on that.",
+            "id": "f2",
+            "label": "Topic(s) Given"
+          }
+        ]
+      },
+      {
+        "fields": [
+          {
+            "label": "Number of People on Panel",
+            "id": "f1",
+            "value": "1"
+          },
+          {
+            "value": "My round lasted for almost 1 hour. The tone was formal and conversational, and the interviewer made me comfortable, asking me to have water because I was very nervous, and it was quite evident to him.",
+            "label": "Duration & Format",
+            "id": "f2"
+          },
+          {
+            "label": "Technical/Domain & Case-Based Questions",
+            "value": "The case study which was solved by us, they had those sheets and asked questions from that. SQL questions were asked, such as window functions, the difference between rank and dense rank and row number, how partition by is used, how two tables can be mapped to each other; the answer was normalization. Then a puzzle was asked, the ant problem, then a math question was asked. Multiple questions from the case study were asked, such as how I solved those particular questions and what my reasoning was, and a guesstimate was asked.",
+            "id": "f3"
+          },
+          {
+            "value": "A guesstimate was asked, and an HR-based question was there: if my manager asks me to work late hours continuously for one month, what will I do? I was grilled on my resume and had to explain all the projects and internship projects as well.",
+            "label": "HR & Guesstimate Questions, & CV/Resume-Based Questions",
+            "id": "f4"
+          },
+          {
+            "label": "Cross-Questioning & Areas of Focus",
+            "id": "f5",
+            "value": "A lot of cross-questioning in guesstimate and SQL-based questions."
+          }
+        ],
+        "kind": "interview",
+        "id": "s3",
+        "title": "Technical PI"
+      },
+      {
+        "id": "s4",
+        "kind": "interview",
+        "title": "Fit Round (HR)",
+        "fields": [
+          {
+            "id": "f1",
+            "value": "1",
+            "label": "Number of People on Panel"
+          },
+          {
+            "id": "f2",
+            "value": "Lasted around 35-45 minutes",
+            "label": "Duration & Format"
+          },
+          {
+            "label": "Technical/Domain & Case-Based Questions",
+            "id": "f3",
+            "value": "No technical questions were asked."
+          },
+          {
+            "label": "HR & Guesstimate Questions, & CV/Resume-Based Questions",
+            "id": "f4",
+            "value": "A guesstimate on how many coffees Nescafe sells in a day and whether Starbucks can be opened? I answered no, so I had to prove it through a guesstimate that it wouldn't be profitable, and I was grilled on my resume."
+          },
+          {
+            "value": "Guesstimates",
+            "label": "Cross-Questioning & Areas of Focus",
+            "id": "f5"
+          }
+        ]
+      }
+    ],
+    "company_name": "ProcDna",
+    "id": "YNkdaWNZ7QmzH4MGX2o2"
+  },
+  {
+    "hiring_mode": "On-Campus",
+    "company_name": "IDFC",
+    "funnel": "8+ CGPA for OA -> 41 second test -> 33 first interview -> 11-12 second interview -> 5 offer",
+    "publishedAt": "2026-09-23T10:43:05.122Z",
+    "sections": [
+      {
+        "title": "Online Assessment",
+        "id": "s1",
+        "kind": "oa",
+        "fields": [
+          {
+            "label": "Format & Duration",
+            "id": "f1",
+            "value": "Both OAs and interviews were online.\nFirst OA was standard reasoning questions.\nSecond OA was code editor-based debugging/feature implementation in Python."
+          },
+          {
+            "value": "Interview 1 -> All core subjects easy/medium questions. Questions about resume/internships\nInterview 2 -> More difficult questions from core subjects (tested deeper understanding from internals) and deep dive in resume (know every word and interview questions from your tech stack). Why you implemented a feature a certain way, trade-offs, etc.",
+            "label": "Types of Questions",
+            "id": "f2"
+          },
+          {
+            "id": "f3",
+            "value": "written above",
+            "label": "Questions Asked & How I Solved Them"
+          },
+          {
+            "value": "8 was cutoff for OA.",
+            "id": "f4",
+            "label": "Result / Cutoff"
+          }
+        ]
+      }
+    ],
+    "process_summary": "2 OAs then 2 interview rounds",
+    "official_role": "Associate Data Engineer",
+    "outcome": "Offer received",
+    "advice": "Make sure you know each and every word in your resume in detail. Don't add internships just for the sake of it. They will ask questions about what, why, and how of your projects and internships. Don't bloat your resume.",
+    "role_id": "data",
+    "role_name": "Data",
+    "overall": "Good experience. Process was conducted on time with no to minimal delay.\nAll the interviews were taken on a single day and the result came at night.",
+    "company_id": "AvUfrlinAqRdk37X2RrV",
+    "batch": "2027",
+    "id": "YQpggnfTODaaBNhcvJfL"
+  },
+  {
+    "process_summary": "OA + Technical Round 1 (DSA) + Technical Round 2 (DSA) + Final Round (Technical + HR)",
+    "batch": "2027",
+    "overall": "Overall, the process was not very difficult; solving DSA regularly helped. Good projects and understanding helped a lot. Also, I enjoyed the interview; it was more like a conversation than an examination.",
+    "funnel": "1400 applicants -> 43 -> 24 -> 17 -> 9 offer",
+    "role_id": "data",
+    "sections": [
+      {
+        "title": "Online Assessment",
+        "fields": [
+          {
+            "value": "Online Assessment; \nAbout 180 minutes; \nSection 1: DSA Question Solving (8 Questions (10 Test Cases Per Question))\nSection 2: Aptitude (25 questions)\nSection 3: Computer Science Fundamentals (20 questions)",
+            "label": "Format & Duration",
+            "id": "f1"
+          },
+          {
+            "label": "Types of Questions",
+            "id": "f2",
+            "value": "DSA (Arrays (ADV), Linked List (ADV), Trees (BASIC), Stack (ADV), Graphs (BASIC))"
+          }
+        ],
+        "id": "s1",
+        "kind": "oa"
+      },
+      {
+        "title": "Technical Round 1 (DSA)",
+        "kind": "interview",
+        "id": "s2",
+        "fields": [
+          {
+            "label": "Panel",
+            "value": "1 interviewer",
+            "id": "f1"
+          },
+          {
+            "label": "Duration & Format",
+            "id": "f2",
+            "value": "Online Assessment; About 40-50 minutes; DSA Question Solving, Logic Discussion, and Dry Run on different Test Cases."
+          }
+        ]
+      },
+      {
+        "kind": "interview",
+        "title": "Technical Round 2 (DSA)",
+        "id": "s3",
+        "fields": [
+          {
+            "label": "Panel",
+            "value": "1 interviewer",
+            "id": "f1"
+          },
+          {
+            "label": "Duration & Format",
+            "value": "Online Assessment; About 80-90 minutes; DSA Question Solving, Logic Discussion, and Dry Run on different Test Cases.",
+            "id": "f2"
+          }
+        ]
+      },
+      {
+        "kind": "interview",
+        "title": "Final Round (Technical + HR)",
+        "fields": [
+          {
+            "value": "1 interviewer",
+            "label": "Panel",
+            "id": "f1"
+          },
+          {
+            "value": "40-50 minutes\nDeep understanding of concepts from resume projects\nSQL Queries (Hard)\nPython Code (Medium-Level, not very hard)\nSystem Design (Medium-Level, not very hard)",
+            "id": "f2",
+            "label": "Duration & Format"
+          },
+          {
+            "id": "f3",
+            "value": "Why Data Engineering?\nWhy Sigmoid?\nHow the job description connects with your resume and personality",
+            "label": "HR & CV Questions"
+          },
+          {
+            "id": "f4",
+            "label": "Cross-questioning & Focus Areas",
+            "value": "Projects done and cases based on them. \neg, If a specific situation arises during your project (technically), what would be your approach?"
+          }
+        ],
+        "id": "s4"
+      }
+    ],
+    "outcome": "Offer received",
+    "official_role": "Data Engineering Track",
+    "company_name": "Sigmoid Analytics",
+    "publishedAt": "2026-09-23T10:43:32.389Z",
+    "role_name": "Data",
+    "advice": "Be confident in what you know. Do not be the master of all trades, or even know the basics of all. Try to keep your resume domain fixed and clear. Do not add 10 of your projects; just focus on the best three that you know the best and can explain easily.",
+    "company_id": "sigmoid-analytics",
+    "hiring_mode": "On-Campus",
+    "id": "ZCKfTn6Eh1EIsVKR0Y72"
+  },
+  {
+    "outcome": "",
+    "funnel": "",
+    "process_summary": "OA + Technical PI + Technical PI 2 / HR Round",
+    "publishedAt": "2026-09-03T18:51:51.092Z",
+    "company_id": "blackrock",
+    "batch": "2027",
+    "sections": [
+      {
+        "fields": [
+          {
+            "label": "Format & Duration",
+            "id": "f1",
+            "value": "- Online and proctored (webcam + mic on, full-screen lock, tab-switch detection), taken on a HackerRank-style platform through the placement portal.\n- Single sitting of roughly 90 minutes, with sectional timers. Once a section was submitted there was no going back to it.\n- Two sections only: Coding (2 DSA problems) and Technical MCQs (core CS fundamentals). There was no aptitude, verbal, or psychometric section for this profile.\n- Any language allowed for the coding section (C / C++ / Java / Python). I wrote both solutions in C++.\n- No negative marking on the MCQs. Coding was scored per test case passed, so partial credit was possible."
+          },
+          {
+            "id": "f2",
+            "value": "- OA was conducted for the full eligible shortlist; results were released by CILP within about 3-4 days.\n- Interviews were scheduled roughly one week after the OA, with both PI rounds held on the same day, back to back.\nWhat decided the shortlist: full test-case pass on both coding problems plus high MCQ accuracy. Total submission time acted as the tie-breaker, so finishing early genuinely mattered - clearing all test cases in the quickest span is what put me through.",
+            "label": "Timeline & Shortlist"
+          },
+          {
+            "value": "- Technical / Coding - 2 DSA problems, Easy to Medium (LeetCode style).\n- Technical MCQs on Core CS fundamentals, spread across: Object-Oriented Programming (OOPS), DBMS and SQL, Operating Systems, Computer Networks, DSA theory and time/space complexity analysis, C++ / Java output-prediction and short debugging snippets.\n- Not included for this role: Quantitative Aptitude, Logical Reasoning, Verbal Ability, Psychometric or Domain-specific Case sections. Other BlackRock profiles (non-tech / analyst tracks) are reported to have an aptitude section - the Aladdin Data Engineering OA was purely technical.",
+            "label": "Types of Questions Asked",
+            "id": "f3"
+          },
+          {
+            "label": "Questions Asked - Coding",
+            "id": "f4",
+            "value": "Note: exact problem statements cannot be reproduced verbatim; they are recorded below as closely as recalled, along with the approach that was used.\n- Q1 - Arrays + hashing / prefix sums (Easy-Medium). Given an integer array, identify sub-arrays satisfying a given sum condition.\n- How I solved it: started from the obvious O(n^2) double loop, identified the repeated summation as the bottleneck, then converted it to a single pass using a running prefix sum stored in a hash map - O(n) time, O(n) space.\n- Edge cases that mattered: negative numbers, zero-sum prefixes, duplicate prefix values (store frequency, not just the index), and a 64-bit accumulator to avoid overflow on max constraints.\n- Q2 - String / stack-based traversal (Medium). A single pass over a sequence where each element's validity depends on the most recent unmatched element before it.\n- How I solved it: monotonic stack, push on open, pop and validate on close, check for a non-empty stack at the end - O(n) time, O(n) space.\n- Also discussed (mentally) the O(1)-space counter sweep and why a plain counter breaks the moment more than one token type exists.\n- General approach: wrote the brute force first, stated the bottleneck, then optimized. Ran custom edge cases (empty input, single element, all-equal values, maximum constraints) before submitting - this is what produced a full test-case pass on both."
+          },
+          {
+            "label": "Questions Asked - Core CS MCQs",
+            "value": "Representative questions by topic:\nOOPS: Compile-time vs run-time polymorphism, and which of the two virtual functions implement. What a vtable is, when it is created, and why a base class destructor should be declared virtual. Abstract class vs interface; can an abstract class have a constructor? Shallow copy vs deep copy - predict the output of a snippet where the copy constructor is omitted. Visibility resulting from public/protected/private inheritance.\nDBMS and SQL: Predict the output of a query using GROUP BY with HAVING; where WHERE applies vs where HAVING applies. Given a set of functional dependencies, identify which normal form the relation violates (2NF/3NF/BCNF). ACID properties - which property a described failure scenario breaks. Match isolation levels to the anomalies they permit (dirty read, non-repeatable read, phantom read). Clustered vs non-clustered index; why B+ trees are preferred over B trees for database indexes. Number of rows returned by INNER JOIN vs LEFT JOIN on two small sample tables.\nOperating Systems: The four necessary conditions for deadlock, and which condition a given scheme eliminates. Process vs thread - what is shared and what is private between threads of the same process. Paging vs segmentation; a numerical on effective memory access time given a TLB hit ratio. Output of a producer-consumer snippet using semaphores. Average waiting time under FCFS/SJF/Round Robin (numerical).\nComputer Networks: TCP vs UDP, and which one a described application should use. The three-way handshake sequence and what happens when a packet is lost. Mapping a given protocol to the correct OSI/TCP-IP layer. HTTP status code classes - what 4xx signals vs what 5xx signals.\nDSA theory and complexity: Complexity of standard operations (heap insert/extract-min, BST search worst case, hashing with chaining). Which traversal combination uniquely reconstructs a binary tree; in-order output of a given BST. Space complexity of a recursive vs an iterative implementation of the same routine.\nOutput/debugging snippets: Pointer arithmetic and array-to-pointer decay in C++. Integer overflow and implicit type conversion output. An off-by-one loop bound producing a wrong result - identify the corrected line.",
+            "id": "f5"
+          },
+          {
+            "value": "- Cleared the MCQ section first and at speed, attempting every question since there was no negative marking, then spent the remaining time on the two coding problems.\n- Did not chase elegance in the coding section - got a correct accepted solution first, then optimized only where the constraints demanded it.",
+            "id": "f6",
+            "label": "Strategy That Worked"
+          }
+        ],
+        "kind": "oa",
+        "title": "Written Test / Online Assessment",
+        "id": "s1"
+      },
+      {
+        "fields": [
+          {
+            "value": "2 - one Aladdin engineer leading the technical discussion and one co-panellist who joined for the resume and fit portion.\n- Panel size varied slightly across candidates; a few reported a single interviewer.",
+            "id": "f1",
+            "label": "Number of People on Panel"
+          },
+          {
+            "value": "- Duration: approximately 50-60 minutes.\n- Tone: formal but conversational and open-ended. Not stress-based at all - I was given time to think and was encouraged to reason out loud.\n- Format: no shared code editor and no live coding. Everything was verbal, with architecture explained on paper/whiteboard.\n- Flow: short self-introduction (~3 min) -> deep dive into my Google internship (~25 min) -> Angular and frontend grilling (~10 min) -> projects (~10 min) -> my questions to the panel.\n- The round was almost entirely CV-driven. There was no textbook DSA question after the OA - the OA is the only algorithmic filter in the process.",
+            "id": "f2",
+            "label": "Duration & Format"
+          },
+          {
+            "value": "- Walk me through both pipelines end-to-end - the recursive LLM tournament and the cascaded re-ranking RAG. Why two parallel pipelines instead of one?\n- Framed it as a quality vs cost/latency trade-off: the tournament pipeline produces higher-fidelity pairwise judgments but scales poorly with candidate count, while the cascaded RAG gives cheap, high-recall retrieval. Both were built so the two could be benchmarked against each other before committing to one.\n- How does the recursive LLM tournament actually work? What is the elimination criterion and what does it cost in LLM calls?\n- Candidates are paired, the model picks a winner per pair, winners advance to the next round - roughly n-1 comparisons across log n rounds. Also discussed the non-transitivity of LLM judgments and how seeding and repeated matches reduce ordering noise.\n- Why embeddings at all? Why not plain keyword or BM25 search over the changelogs?\n- Changelog queries are heavily paraphrastic, so lexical search misses synonymy and reworded release notes. I mentioned hybrid retrieval (BM25 + dense) as the practical production answer rather than dense-only.\n- What was your chunking strategy across 20K+ documents? How did you choose chunk size and overlap?\n- Structure-aware chunking along changelog sections rather than blind fixed-length splits, with a token budget and overlap to preserve context across boundaries, tuned against a labeled query set.\n- Which index did you use, and what is the recall vs latency trade-off?\n- Discussed exact search vs approximate nearest neighbor (HNSW-style), the effect of the knobs on recall@k, and why exact search is perfectly acceptable at 20K documents but not at 20M.\n- What is re-ranking and why cascade it? Bi-encoder vs cross-encoder.\n- A bi-encoder encodes query and document independently so vectors can be precomputed - cheap but less accurate. A cross-encoder scores the pair jointly and is far more accurate but must run per candidate. Hence: cheap retrieval down to top-k, expensive re-rank over k only.\n- How did you evaluate retrieval quality?\n- Recall@k, MRR and nDCG against a human-labeled query set, with an ablation on each stage of the cascade so the contribution of the re-ranker could be isolated.\n- How did you arrive at the \"33,500+ manual hours saved\" figure?\n- Baseline manual review time per document x document volume x automation coverage, cross-checked against the team's own tracked effort data. They pushed hard here (see cross-questioning).\n- How would this scale from 20K documents to 20M?\n- Shard the index, move embedding generation into a batched offline job, use incremental/delta indexing instead of full rebuilds, and separate the build index from the serving index so a rebuild never blocks queries.\n- Changelogs get edited. How do you keep the embeddings fresh?\n- Change data capture on the source, an embedding version tied to each document revision, re-embedding only the delta, and a document -> chunk -> vector lineage map so deletions propagate instead of leaving orphan vectors.\n- What happens when the LLM or embedding service is rate-limited or down?\n- Exponential backoff with jitter, request batching, a cache keyed on content hash, and a dead-letter queue so the run is replayable and idempotent rather than silently lossy.\n- How do you prevent hallucination in the generated output?\n- Grounding by construction - every answer must cite the retrieved chunk IDs it used, and a low-confidence retrieval short-circuits to \"no answer\" rather than generating unsupported text.\n- Explain the hybrid Drive API authentication with 1P Offline Access.\n- Interactive OAuth for user-scoped reads, combined with offline access and refresh tokens so an asynchronous background pipeline can continue acting on the user's behalf after the session ends. Also covered token storage, scope minimization and revocation handling.",
+            "id": "f3",
+            "label": "Technical Questions - Google Internship (RAG & Semantic Search)"
+          },
+          {
+            "value": "Angular / frontend (5-6 questions, syntax and internals):\n- What is the difference between a component, a directive, and a pipe, and when would you write a structural directive?\n- Explain dependency injection in Angular. What does the @Injectable() decorator actually do?\n- providedIn: 'root' vs providers: [] in an NgModule vs a component-level provider - how does the instance scope change in each case?\n- What is tree-shaking, and why does providedIn: 'root' make a service tree-shakable when declaring it in an NgModule's providers array does not?\n- What is an InjectionToken, and why can you not simply inject an interface?\n- Change detection: Default vs OnPush strategy - why does OnPush matter specifically for a real-time article diff editor?\n- Observables vs Promises; which RxJS operators were used and why (switchMap vs mergeMap for cancelling stale requests, debounceTime on user input).\n- How do you avoid memory leaks from subscriptions? (async pipe, takeUntil with a destroy subject, unsubscribing in ngOnDestroy)\n- constructor vs ngOnInit - what belongs in each and why.\n- Why gRPC-Web instead of REST for the editor, and how does protobuf handle schema evolution?\n- Note for future candidates: this entire ten-minute block was triggered by a single line in one resume bullet.\nProjects:\n- Brain Tumor Segmentation: what nnU-Net automates that a hand-built U-Net does not; what a Dice score actually measures; why WT scores higher than TC and ET; how brain-masked normalization reduced label noise; how class imbalance was handled.\n- AI-RoadIntelligence: how 45 FPS was sustained on concurrent streams; where the sub-50 ms latency budget was spent; what the SUMO simulator contributed beyond the detector itself.",
+            "id": "f4",
+            "label": "Technical Questions - Angular / Frontend & Projects"
+          },
+          {
+            "id": "f5",
+            "value": "- Introduce yourself, and walk me through your resume in two minutes.\n- Why BlackRock? What do you know about Aladdin and what it does?\n- Why data engineering, when most of your work is AI/ML? (I framed it around the fact that every ML system I had built was really a data problem first - retrieval quality, freshness, correctness, and lineage were what determined outcomes, not the model.)\n- Which project are you most proud of, and which one would you rewrite today if you could?\n- How do you manage academics alongside two internships? (a brief question on CGPA and workload)\n- Tell me something you have learned recently that is not on your resume.\n- Do you have any questions for us? - I asked about the team's data stack, what an Aladdin Data engineer actually owns day to day, and how the intern-to-full-time path works.\n- No guesstimate, puzzle, or brainteaser questions were asked in either round.",
+            "label": "HR & Guesstimate Questions, & CV/Resume-Based Questions"
+          },
+          {
+            "value": "- The panel never accepted a first answer. Every design choice was followed by a \"why not X?\" - why not BM25, why not one pipeline, why not exact search, why not REST. Having the discarded alternative ready mattered as much as having the chosen one.\n- Every number on the resume was audited. I was asked to derive the 33,500+ hours figure and to justify the 20K+ document scale and the embedding model choice. Bring the arithmetic, not just the claim.\n- A one-line mention is fair game. The entire Angular block came out of half a sentence in a bullet point.\n- The questioning was designed to separate ownership from proximity - almost everything was about decisions and trade-offs, and very little about syntax except within the Angular block.\n- What they appeared to be assessing: architectural clarity, the ability to explain a complex pipeline to someone with zero context, comfort with saying \"I do not know, but here is how I would find out\", and honesty about the limits of what I built versus what the team built.\n- Follow-ups were threaded rather than scripted - each of my answers generated the next question, so a vague answer created its own trouble two questions later.",
+            "id": "f6",
+            "label": "Cross-Questioning & Areas of Focus"
+          }
+        ],
+        "kind": "interview",
+        "title": "PI Round 1",
+        "id": "s2"
+      },
+      {
+        "kind": "interview",
+        "fields": [
+          {
+            "id": "f1",
+            "label": "Number of People on Panel",
+            "value": "2 - a senior engineer and a hiring manager. The senior engineer drove the technical half; the manager led the behavioral half."
+          },
+          {
+            "label": "Duration & Format",
+            "id": "f2",
+            "value": "- Duration: approximately 1 hour 30 minutes - the longest round of the entire process.\n- Structure: two clear halves - roughly 50-60 minutes of a line-by-line technical audit of the CV, followed by 30-40 minutes of HR / behavioral and \"technical-HR\" questions.\n- Tone: formal, dense, and relentless in depth, but not hostile and not a stress interview. They interrupted frequently, but to go deeper rather than to unsettle.\n- No live coding here either. Architecture was drawn and explained; SQL and database questions were answered verbally."
+          },
+          {
+            "label": "Technical Questions - Internships Revisited",
+            "value": "A. Google internship, revisited at greater depth:\n- Draw the full pipeline - source -> ingestion -> chunking -> embedding -> index -> retrieval -> re-ranking -> generation -> serving. Now mark every point at which it can fail.\n- Which stage is the bottleneck, and how did you measure that rather than assume it?\n- What is your rollback plan if a bad index build ships to production?\n- How would you monitor a pipeline like this in production - what are the metrics, and what should page you at 3 AM? (data freshness, ingest volume vs expected, error and retry rates, p95 retrieval latency, and recall drift against a golden query set)\nB. Samsung PRISM - Short Text Topic Modeling (a heavy block):\n- What is short-text topic modeling, and why does classical LDA break down on text under 50 tokens? - document-level word co-occurrence becomes too sparse for the topic-word distributions to be estimated reliably.\n- Explain GSDMM. What is the movie-group process, and what assumption does it make? - a Dirichlet Multinomial Mixture that assumes one topic per short document, with clustering driven by a balance of completeness and homogeneity.\n- GSDMM vs BTM - what does BTM model instead? - biterms, i.e., unordered word pairs aggregated at the corpus level, which sidesteps document-level sparsity entirely.\n- How do you choose K, and what happens if K is set too high in GSDMM? - GSDMM collapses empty clusters on its own, so over-specifying K is comparatively safe; under-specifying is not.\n- Which coherence metric did you use, what is the 18% improvement measured against, and on which dataset?\n- Why C++ rather than pure Python for the pipeline? - deterministic memory behavior and control over allocation on a constrained device, plus the eventual need to sit behind a mobile runtime.\n- How did you achieve a 35% memory reduction? - quantization (post-training vs quantization-aware training, int8 vs fp16), pruning, and operator fusion. Followed immediately by: what did that cost you in accuracy, and how did you verify it?\n- How does a TFLite delegate use the mobile NPU, and what happens to unsupported operators? - they fall back to CPU, and enough fallbacks will erase the latency win entirely, so the op set has to be checked before claiming a speed-up.\n- How did you benchmark real-time inference - which device, what batch size, how many warm-up runs, and did you account for thermal throttling?\nC. Projects - impact first, internals second:\n- What real problem does each project solve, and who is the user? (they deliberately stayed at this level rather than digging into model internals)\n- If this went to production tomorrow, what breaks first?\n- Which of these numbers are measured and which are estimated?",
+            "id": "f3"
+          },
+          {
+            "label": "Technical Questions - Data Engineering & System Design",
+            "value": "- Design a pipeline that ingests reference and market data from several vendors daily and lands it in a warehouse for downstream analytics.\n- My answer: source -> immutable raw landing zone -> schema and quality validation with a quarantine path -> transformation -> curated warehouse tables -> serving layer, all orchestrated as a DAG with retries and alerting.\n- How do you handle late-arriving and out-of-order data? - event-time partitioning with watermarks and defined reprocessing windows, rather than overwriting a partition and losing history.\n- How do you handle schema drift from a vendor? - a schema contract/registry, additive-only evolution by default, and quarantine plus alert on a breaking change. Never silently drop an unrecognized field.\n- What makes a pipeline idempotent, and why does that matter more than chasing exactly-once semantics? - deterministic partition keys plus an upsert/merge on a natural key, so a replay converges to the same state instead of duplicating rows.\n- Batch vs streaming - when would you choose Kafka and stream processing over a nightly batch job? - it is driven by the decision latency the consumer needs, not by data volume.\n- SQL: deduplicate a table keeping only the latest record per key. - ROW_NUMBER() OVER (PARTITION BY key ORDER BY updated_at DESC) inside a CTE, filtered to rn = 1.\n- SQL: running total, and rank within a group. - SUM(...) OVER (PARTITION BY ... ORDER BY ...), plus the difference between RANK, DENSE_RANK, and ROW_NUMBER on ties.\n- Star schema vs snowflake schema; OLTP vs OLAP workloads; when denormalization is the correct call.\n- How would you debug a slow query? - read the EXPLAIN plan first, check index usage and selectivity, look for partition pruning, and avoid wrapping indexed columns in functions.\n- What data quality checks would you place on a financial dataset? - row-count and freshness thresholds, null and uniqueness constraints, referential integrity, distribution/drift checks, and reconciliation against the source of record.\n- Why is data correctness non-negotiable at a firm like BlackRock? - everything downstream feeds client money and risk models, so a silently wrong value is far more dangerous than a failed job. Fail loudly, quarantine, and never half-load a table.\n- A few fundamentals cross-checks: SQL vs NoSQL and when to choose each, ACID vs BASE, CAP theorem trade-offs, and normalization forms.",
+            "id": "f4"
+          },
+          {
+            "id": "f5",
+            "value": "Roughly 30-40 minutes, mostly \"technical-HR\" - behavioral questions set in an engineering context. Answers were expected as specific incidents, not philosophy; a STAR structure worked well.\n- How many people have you worked with on a team, and what was your role within it?\n- How do you handle a difference of opinion with a teammate? Give me a real instance and tell me how it ended. (followed up twice for further detail)\n- Tell me about the toughest phase you have faced in a development cycle and how you got out of it.\n- What was the biggest challenge in your internship, and what did you do differently afterward?\n- What is the toughest lesson you have learned so far?\n- What factors do you care about most when you productionize something? (my answer, in order: correctness and data integrity first; then observability - logs, metrics, lineage; then failure behavior - retries, idempotency, rollback; then latency and cost; then access control; and finally documentation and handover so the system survives me leaving)\n- How do you prioritize when several things are urgent at the same time?\n- Tell me about a time you took ownership of something outside your assigned scope.\n- How would you explain a technical decision to a non-technical stakeholder?\n- Tell me about a time you received critical feedback. What did you do with it?\n- Where do you see yourself in three to five years? Are you comfortable working on data infrastructure rather than model building?\n- Why BlackRock, and what do you know about our principles?\n- Do you have any questions for us?\nMost unexpected/most challenging:\n- The productionization question. It is completely open-ended and it reveals within thirty seconds whether you have ever actually shipped something that other people depend on.\n- The \"difference of opinion\" question, because it was cross-examined twice - a general answer was not accepted, they wanted the actual conversation.",
+            "label": "HR & Behavioural Questions"
+          },
+          {
+            "value": "- Every single line of the CV was covered - internships, projects, skills, achievements, and the leadership section. Nothing was skipped. Assume a full audit rather than a sample.\n- Two distinct modes: on internships, they went for technical depth and the reasoning behind each decision; on projects, they went for impact and measurement and largely left the internals alone. Prepare for both, because switching between them mid-round is jarring if you have only rehearsed one.\n- Behavioral answers were cross-questioned for specifics - \"what exactly did you say\", \"what did the other person do\", \"what was the outcome\". Generic answers were pushed until they became concrete.\n- They repeatedly checked whether I separate measured results from estimates. Being candid that a figure was an estimate landed noticeably better than defending every number as hard data.\n- What they appeared to be assessing, mapped onto BlackRock's own five principles: emotional ownership (do you still feel responsible after the code merges?), One BlackRock (how you behave inside a team and across functions), passion about performance (do you stop at the first working solution or push past it?), and the fiduciary mindset, which in engineering terms is simply that data correctness is not negotiable.\n- The verdict came through the placement cell within about a day.",
+            "id": "f6",
+            "label": "Cross-Questioning & Areas of Focus"
+          }
+        ],
+        "id": "s3",
+        "title": "PI Round 2"
+      }
+    ],
+    "company_name": "Blackrock",
+    "hiring_mode": "On-Campus",
+    "official_role": "Aladdin Data",
+    "overall": "- Full timeline: OA -> roughly one week gap -> both PI rounds on the same day, back to back -> result within about 24 hours through CILP.\n- The process is overwhelmingly CV-driven. The OA is the only algorithmic filter; after that, not a single classical DSA question was asked in either interview. What you have actually built is what gets tested.\n- Interviewers were friendly, gave real thinking time, and clearly wanted to hear reasoning out loud. Saying \"I am not certain, but here is how I would approach it\" was received well and never penalized.\n- Question sets differed noticeably between candidates precisely because they are drawn from each person's own resume - some were taken deeper into DBMS and OS fundamentals, others further into system design. Do not assume another candidate's experience will transfer directly.",
+    "advice": "Preparation advice:\n- OA: LeetCode Easy-Medium across arrays, strings, hashing, prefix sums, stacks, sliding window, trees, basic graphs, and introductory DP. Practice for speed, since total time is the tie-breaker.\n- Core CS MCQs: revise OOPS, DBMS (normalization, ACID, indexing, isolation levels, joins), OS (deadlock, scheduling, paging, semaphores), and CN (TCP vs UDP, handshake, layers). These are quick marks and they are heavily weighted.\n- Highest-leverage prep for this specific profile: SQL window functions, CTEs, joins, dedup patterns, star vs snowflake schemas, ETL vs ELT, idempotency, late-arriving data, schema drift, and data quality checks. This is exactly what separates the Aladdin Data Engineering profile from a generic SDE one, and it is where most candidates are under-prepared.\n- Be able to draw every project and internship end to end in five minutes, including where it fails and what you would change today.\n- Know every number on your resume and how it was computed. If you cannot derive it under questioning, do not put it on the page.\n- Do not list a technology you cannot defend at the syntax level. One line about Angular cost me ten minutes of internals questions - injectables, injection tokens, tree-shaking, change detection.\n- Read about Aladdin - what it is, why data sits at the center of it - and about the five BlackRock Principles: fiduciary to clients, One BlackRock, passionate about performance, emotional ownership, and committed to a better future. Map one story from your own experience onto each of them.\n- Prepare four or five STAR stories: conflict, failure, ownership beyond scope, a hard deadline, and critical feedback. Every one of them will be cross-questioned for specifics.\n- Prepare genuine questions for the panel - both rounds ended on this, and it is an easy place to show you have actually researched the team.\nMistakes to avoid:\n- Padding the CV. Everything on it gets audited, including single-line mentions and older projects.\n- Answering behavioral questions in the abstract. They want the incident, the dialogue, and the outcome - not your philosophy on teamwork.\n- Jumping straight to the optimal solution without stating the brute force and naming the bottleneck. The reasoning is what is being scored, not just the final answer.\n- Treating this as an ML role. It is a data engineering role. Frame any ML or research work in terms of pipelines, reliability, data correctness, and measurable impact.\n- Under-preparing SQL. It is assumed knowledge here in a way it is not in a general SDE interview.",
+    "role_id": "data",
+    "role_name": "Data",
+    "id": "dEM86j6JeB4cZhi8qT1l"
+  },
+  {
+    "role_id": "software",
+    "hiring_mode": "On-Campus",
+    "company_name": "Juspay",
+    "company_id": "iIlQEHewWYvRUn657q8w",
+    "publishedAt": "2026-09-03T18:52:42.258Z",
+    "advice": "Strong fundamentals are important, but Juspay's process also heavily tests depth of understanding, problem-solving under uncertainty, patience, and the ability to learn during the interview itself.",
+    "official_role": "Software Development Engineer (SDE)",
+    "overall": "The overall process had 6 rounds, moving from a large applicant pool down to a single offer. The process felt quite different from other companies that mainly test existing knowledge. There was a lot to learn along the way. The interviewers seemed to be testing patience and how candidates handled sudden or unfamiliar questions - whether concepts were understood in depth or only superficially. It was intense and exhausting overall (especially Round 4, which ran nearly the whole day), but the interviewers and mentors were genuinely friendly and helpful throughout.\nAs with most such processes, the experience depended a fair bit on which interviewer/mentor was assigned and what set of questions they had prepared.",
+    "role_name": "Software",
+    "process_summary": "Online Assessment (DSA) -> Pen & Paper Test (MCQs) -> Hackathon Part A -> Hackathon Part B -> Technical Interview (On-site) -> Cultural + Tech (Fit) Round",
+    "funnel": "600 candidates -> 35 -> 25 -> 14 -> 7 -> 1 offer. 60% cutoff for Rounds 1-3",
+    "batch": "2027",
+    "sections": [
+      {
+        "id": "s1",
+        "kind": "oa",
+        "title": "Online Assessment (DSA-Focused)",
+        "fields": [
+          {
+            "id": "f1",
+            "label": "Format & Duration",
+            "value": "Online, strictly timed. Conducted in the college computer labs."
+          },
+          {
+            "value": "Three DSA (Data Structures & Algorithms) problems, based on sliding window, trees, and graphs.",
+            "label": "Types of Questions Asked",
+            "id": "f2"
+          },
+          {
+            "value": "Needed 60% or above to qualify. Advanced along with 34 other students (35 total moved to Round 2).",
+            "id": "f3",
+            "label": "Result"
+          }
+        ]
+      },
+      {
+        "title": "Pen & Paper Test (MCQs)",
+        "id": "s2",
+        "kind": "oa",
+        "fields": [
+          {
+            "id": "f1",
+            "label": "Format & Duration",
+            "value": "Offline, pen-and-paper test. 1 hour."
+          },
+          {
+            "id": "f2",
+            "label": "Types of Questions Asked",
+            "value": "16 MCQs covering CS fundamentals along with Maths and Physics (including probability)."
+          },
+          {
+            "label": "Approach / Strategy",
+            "value": "Used the elimination method for questions where the direct answer wasn't immediately known.",
+            "id": "f3"
+          },
+          {
+            "label": "Result",
+            "value": "Needed 60% or above to qualify. 25 students moved on to Round 3.",
+            "id": "f4"
+          }
+        ]
+      },
+      {
+        "title": "Hackathon - Part A",
+        "fields": [
+          {
+            "label": "Format & Duration",
+            "value": "3 hours.",
+            "id": "f1"
+          },
+          {
+            "id": "f2",
+            "value": "A standard \"Tree of Space\" style problem: given a complete, balanced N-ary tree, support Q queries of 3 kinds - Lock(v, id), Unlock(v, id), and Upgrade(v, id) - each returning true/false based on success.\nLock(v, id): locks vertex v for user id. A vertex cannot be locked if any ancestor or descendant is already locked by any user, and it cannot already be locked itself.\nUnlock(v, id): unlocks v only if it is currently locked by the same id.\nUpgrade(v, id): if v itself is unlocked, has at least one locked vertex in its subtree, and every locked vertex in its subtree is locked by the same id, then all those descendant locks are released and v is locked instead. Upgrade fails if v is already locked, has a locked ancestor, or if any locked descendant belongs to a different user.\nHad to implement Lock, Unlock, and Upgrade for the given tree and array of queries.",
+            "label": "Problem Statement"
+          },
+          {
+            "value": "Needed 60% or above to qualify. 14 students moved on to Round 4.",
+            "id": "f3",
+            "label": "Result"
+          }
+        ],
+        "id": "s3",
+        "kind": "hackathon"
+      },
+      {
+        "id": "s4",
+        "kind": "hackathon",
+        "fields": [
+          {
+            "label": "Format & Duration",
+            "id": "f1",
+            "value": "Full-day round, from 12:00 PM to 10:30 PM. Conducted remotely - given a Slack link, paired with a mentor who joined over Google Meet."
+          },
+          {
+            "value": "Prepared Operating Systems fundamentals and the Round 3 (\"Tree of Space\") problem in real depth beforehand.",
+            "id": "f2",
+            "label": "Preparation"
+          },
+          {
+            "label": "Technical/Domain Questions",
+            "id": "f3",
+            "value": "Started with a self-introduction, followed by a deep dive on a resume project (the mentor picked one to question further), and some CS fundamentals questions.\nMain hackathon task: extend the Round 3 solution to make it thread-safe. Explained multiple possible approaches to the mentor - e.g., a mutex over the entire tree, semaphores, etc.\nThe mentor then pushed further, asking for an approach that used no built-in thread-safety functions or libraries, and nudged in the right direction until a working solution was found."
+          },
+          {
+            "id": "f4",
+            "value": "7 students moved on to Round 5 (the on-site round in Bangalore).",
+            "label": "Result"
+          }
+        ],
+        "title": "Hackathon - Part B"
+      },
+      {
+        "id": "s5",
+        "title": "Technical Interview (On-site, Bangalore)",
+        "kind": "interview",
+        "fields": [
+          {
+            "id": "f1",
+            "label": "Duration & Format",
+            "value": "On-site, one-on-one, conversational in tone - didn't feel like a strict/stress interview. Interviewer was ready to help if stuck."
+          },
+          {
+            "value": "Prepared CS fundamentals, System Design (both HLD and LLD), and went through the resume in depth.",
+            "id": "f2",
+            "label": "Preparation"
+          },
+          {
+            "id": "f3",
+            "value": "Self-introduction, followed by questions on the summer internship and its project.\nResume listed skills like transformers and speech synthesis - asked to explain Whisper and how it works, including the transformer architecture in detail.\nAsked to reason on the spot about how a denoiser model works, before explaining it - interviewer was explicitly testing on-the-spot thinking.\nQuestions on WebSockets, and the difference between PUT and PATCH.\nDiscussed permission systems in AI agents, using Claude as an example - particularly why destructive actions such as deletion may require explicit user authorization while read-only actions may not.\nA hypothetical/design discussion: what would happen if large companies ran models like Anthropic's locally instead of on the cloud - covering scaling issues, storage/space constraints, etc.",
+            "label": "Technical/Domain & Resume-Based Questions"
+          },
+          {
+            "value": "1 student (final candidate) moved on to Round 6.",
+            "id": "f4",
+            "label": "Result"
+          }
+        ]
+      },
+      {
+        "kind": "interview",
+        "id": "s6",
+        "title": "Cultural + Tech (Fit) Round",
+        "fields": [
+          {
+            "value": "Half an hour to one hour. Primarily a culture/values fit round.",
+            "id": "f1",
+            "label": "Duration & Format"
+          },
+          {
+            "label": "Preparation",
+            "id": "f2",
+            "value": "Be prepared to discuss your resume, academic subjects, motivation for engineering, and why you specifically want to join Juspay."
+          },
+          {
+            "label": "HR & Fit-Based Questions",
+            "id": "f3",
+            "value": "Self-introduction, followed by questions on current semester subjects and which one was a favorite, with related technical follow-up questions on that subject.\n\"Why engineering?\" and \"if not engineering, then what?\"\n\"Why Juspay?\"\nThe interviewer also explained how Juspay works as a company/product."
+          },
+          {
+            "id": "f4",
+            "label": "Result",
+            "value": "Received the offer."
+          }
+        ]
+      }
+    ],
+    "outcome": "Offer received",
+    "id": "fW4sbvg8XNtrOXWlxXAS"
+  },
+  {
+    "advice": "Be prepared to explain every project on your resume in depth and understand why you chose each technology. Revise core CS fundamentals, especially DBMS, Computer Networks, OOPS, authentication, databases, caching, and DSA. For project-based interviews, focus on understanding the trade-offs behind your decisions rather than memorizing answers. Also prepare a few concrete examples for behavioral questions involving teamwork, leadership, and conflict resolution.",
+    "overall": "The process was more discussion-oriented than a typical interview. The interviewers were interested in understanding my projects and the reasoning behind my technical decisions rather than just testing memorized concepts. The questions often followed naturally from my answers, so having a strong understanding of everything mentioned on the resume was important. The process covered a good mix of project discussions, core CS fundamentals, DSA, backend concepts, and behavioral questions.",
+    "process_summary": "Online Assessment -> Technical Interview -> Technical + Behavioral Interview",
+    "role_id": "software",
+    "company_id": "apple",
+    "company_name": "Apple",
+    "sections": [
+      {
+        "title": "Online Assessment",
+        "id": "s1",
+        "kind": "oa",
+        "fields": [
+          {
+            "id": "f1",
+            "label": "Format & Duration",
+            "value": "Online assessment conducted on CoderPad, consisting of technical questions and DSA problems."
+          },
+          {
+            "value": "Core CS Fundamentals\n  - Computer Networks\n  - DBMS\n  - Subnetting\n  - OOPS\n  - Time and Space Complexity\n  - Output-based questions\n\nDSA Questions\n  - House Robber\n  - Minimum Cost to Hire K Workers",
+            "label": "Types of Questions",
+            "id": "f2"
+          },
+          {
+            "value": "65 students advanced",
+            "label": "Result / Cutoff",
+            "id": "f3"
+          }
+        ]
+      },
+      {
+        "kind": "interview",
+        "title": "Interview Round 1",
+        "id": "s2",
+        "fields": [
+          {
+            "value": "1 interviewer",
+            "label": "Panel",
+            "id": "f1"
+          },
+          {
+            "value": "Virtual interview on Webex, approximately 45 minutes. The round started with some general questions about my college journey and how I felt about the interview. It then developed into an open-ended discussion around my projects and technical decisions rather than following a fixed set of questions.",
+            "id": "f2",
+            "label": "Duration & Format"
+          },
+          {
+            "value": "Q1. Tell me about your GenAI project.\nAnswer / Approach: Explained the project end-to-end, including its purpose, architecture, technologies used, and implementation.\n\nQ2. What are the technical details of the project?\nAnswer / Approach: Discussed the implementation in detail and explained the reasoning behind the technical choices.\n\nQ3. What are some alternative use cases for the project?\nAnswer / Approach: Discussed how the same underlying approach could be adapted to different use cases.\n\nQ4. How would you implement Two-Factor Authentication?\nAnswer / Approach: Explained the authentication flow and how a second verification factor could be added to the login process.\n\nQ5. Can a JWT be invalidated before its expiry?\nAnswer / Approach: Discussed the stateless nature of JWTs and different approaches to invalidate or revoke tokens before their natural expiry.\n\nQ6. How would you implement authentication using Express and refresh tokens?\nAnswer / Approach: Explained the access-token and refresh-token flow and how refresh tokens can be used to obtain new access tokens.\n\nQ7. How would you handle authorization?\nAnswer / Approach: Explained the difference between authentication and authorization and how permissions can be checked before allowing access to protected resources.\n\nQ8. If you were shipping an authentication system, what documentation and test cases would you consider?\nAnswer / Approach: Discussed documenting authentication and authorization flows, APIs, token handling, error cases, and security considerations. Also discussed testing successful and failed authentication, token expiry, invalid tokens, authorization failures, and edge cases.\n\nQ9. Find the second maximum element in an array.\nAnswer / Approach: Discussed three different approaches and compared their time and space complexities and trade-offs.",
+            "id": "f3",
+            "label": "Discussion & Technical Questions"
+          }
+        ]
+      },
+      {
+        "kind": "interview",
+        "id": "s3",
+        "fields": [
+          {
+            "value": "1 interviewer",
+            "id": "f1",
+            "label": "Panel"
+          },
+          {
+            "label": "Duration & Format",
+            "id": "f2",
+            "value": "Virtual interview on Webex, approximately 45 minutes. The round continued as a discussion around my projects, technical concepts, and behavioral questions."
+          },
+          {
+            "label": "Technical / Project Questions",
+            "value": "Q1. Explain your projects individually and what makes each project unique.\nAnswer / Approach: Explained each project, its purpose, key technical components, and the aspects that differentiate each project.\n\nQ2. What are Vector Databases and why are they used?\nAnswer / Approach: Explained that vector databases store and efficiently search high-dimensional vector embeddings. Discussed their use in semantic search and retrieval-based AI applications.\n\nQ3. What other Vector Databases do you know apart from the one used in your project?\nAnswer / Approach: Discussed other commonly used vector databases and compared them at a high level with the one used in my project.\n\nQ4. What is MongoDB and why did you use it?\nAnswer / Approach: Explained MongoDB as a NoSQL document-oriented database and discussed why its flexible document model was suitable for my project.\n\nQ5. Explain LRU Cache.\nAnswer / Approach: Explained the Least Recently Used caching strategy and how it can be implemented using a hash map and doubly linked list to achieve O(1) get and put operations.\n\nQ6. How would you consider security in your project?\nAnswer / Approach: Discussed authentication, authorization, secure token handling, input validation, access control, and protecting APIs from common security issues.\n\nQ7. What is Rate Limiting and how would you implement it?\nAnswer / Approach: Explained rate limiting as restricting the number of requests a client can make within a given time period. Discussed approaches such as token bucket and how it can be applied to APIs.\n\nQ8. What are Guardrails and how would you use them in an AI-based application?\nAnswer / Approach: Explained guardrails as mechanisms that constrain and validate AI inputs and outputs. Discussed their role in preventing unsafe or irrelevant responses and enforcing application-specific rules.",
+            "id": "f3"
+          },
+          {
+            "id": "f4",
+            "label": "Behavioral Questions",
+            "value": "Q1. Describe a situation where you led a team and had to resolve a conflict.\nAnswer / Approach: Discussed a specific team situation, how the disagreement was handled through communication and understanding different viewpoints, and how we reached a resolution.\n\nQ2. What is one thing you would like to change at Apple?\nAnswer / Approach: Discussed a constructive change I would consider from a user/product perspective and explained the reasoning behind it.\n\nQ3. What is an unconventional or out-of-the-box change you would suggest for Apple?\nAnswer / Approach: Proposed an unconventional product-level idea and explained the potential reasoning and use case behind it."
+          }
+        ],
+        "title": "Interview Round 2"
+      }
+    ],
+    "hiring_mode": "On-Campus",
+    "outcome": "Offer received",
+    "role_name": "Software",
+    "funnel": "600 -> 65 -> 40 -> 15 offer",
+    "publishedAt": "2026-09-23T10:42:09.174Z",
+    "batch": "2027",
+    "official_role": "IS&T Dev Intern",
+    "id": "oRqhGU6IW14F3oVe4bPw"
+  },
+  {
+    "role_id": "software",
+    "funnel": "",
+    "company_name": "Zomato",
+    "process_summary": "OA + 4 rounds of interview",
+    "batch": "2027",
+    "overall": "",
+    "official_role": "SDE",
+    "sections": [
+      {
+        "kind": "oa",
+        "title": "Written Test / Online Assessment",
+        "fields": [
+          {
+            "id": "f1",
+            "label": "Format & Duration",
+            "value": "It was a 90-minute test (20+70), fully proctored, on HackerRank, offline at campus. 20 minutes for MCQs (15 questions) + 70 minutes for 3 DSA questions. Switching between questions was allowed in each section. (Section switching was not allowed.)"
+          },
+          {
+            "id": "f2",
+            "value": "MCQs were technical (core subjects) + around 2-3 MCQs from aptitude. DSA questions were medium to hard level (you could ace them if you have been consistently practicing on LeetCode/Codeforces). I have rarely missed a day when I didn't solve problems since March 2025.",
+            "label": "Types of Questions Asked"
+          },
+          {
+            "value": "I don't remember any MCQ as of now. They were very random, and I never saw the same questions before.\nFor the DSA section, (all were new questions)\nFirst - greedy + sorting\nSecond - I wasn't able to solve due to lack of time\nThird - DSU (graphs).\nNote - The questions are not straightforward or guessable about the topic; it's only after multiple dry runs and trying multiple approaches that you reach the right solution. Also, you need to be very quick in coding because of time constraints. Try to give contests as much as possible because they teach you about time management, and also you get to learn to approach new questions.",
+            "label": "Questions Asked",
+            "id": "f3"
+          }
+        ],
+        "id": "s1"
+      },
+      {
+        "fields": [
+          {
+            "label": "Number of People on Panel",
+            "id": "f1",
+            "value": "1 (face to face)"
+          },
+          {
+            "label": "Duration & Format",
+            "value": "Approximately 45-50 minutes. The interviewer was very conversational.",
+            "id": "f2"
+          },
+          {
+            "label": "Technical/Domain & Case-Based Questions",
+            "id": "f3",
+            "value": "The interview began with my introduction and was followed by his. It was a purely technical interview. I previously interned at Samsung, which was a key highlight of my resume. He asked me about that only because I mentioned the internship in my introduction also. We discussed my project at Samsung and how I got there, my internship experience, things I liked about the company, etc. Then we redesigned my project from scratch (system design), like a verbal discussion only. He asked about architectural decisions in the project, why I used xyz tech and why not abc. Then, there was a discussion around known vulnerabilities in the project and how to fix them. This part took around 30 minutes. I was also asked about core subjects in the middle of the discussion of the project only. So the interviewer evaluated all technical skills based on that only.\nThen he gave me a hard DSA question to solve, and I had to explain the approach on pen and paper only (pseudo code). It was a new question, but I was familiar with the pattern and solved it in no time. Below is the most similar question: https://leetcode.com/problems/maximum-frequency-stack/description/\nI took the standard approach to give the solution (even though I knew the solution).\n1. Don't right away tell the optimal solution; always ask questions like what are the constraints, etc.\n2. Then give the brute-force solution. The interviewer will ask to optimize, then give the optimal one. Also, I was asked about time complexity and space complexity.\nI was drawing and explaining on a sheet to him (this is a good habit); always draw and explain things when you can. He was quite impressed and told me that it was a great discussion and gave positive feedback.\nTips: Maintain eye contact, look confident, and explain everything clearly without fumbling. Be as real as you can; don't try to make up things on the spot because they can see through it clearly. Also, I referred to the interviewers in all rounds by their name (in corporate, calling by sir/mam is unprofessional). Be comfortable doing so."
+          },
+          {
+            "id": "f4",
+            "label": "HR & Guesstimate Questions, & CV/Resume-Based Questions",
+            "value": "No HR/Guesstimates asked. Resume-based questions were about the internship and project deep dive."
+          },
+          {
+            "label": "Cross-Questioning & Areas of Focus",
+            "id": "f5",
+            "value": "Cross-questioning was about technical decisions in the project. The area of focus was system design, coding ability, and DSA. They also eagerly wanted to know whether I would work with Samsung or Zomato (asked to me in further rounds also)."
+          }
+        ],
+        "id": "s2",
+        "kind": "interview",
+        "title": "PI Round 1"
+      },
+      {
+        "kind": "interview",
+        "title": "PI Round 2",
+        "fields": [
+          {
+            "label": "Number of People on Panel",
+            "id": "f1",
+            "value": "1 (online)"
+          },
+          {
+            "label": "Duration & Format",
+            "id": "f2",
+            "value": "1 hour. It was a formal interview, no discussions, just another hard DSA question."
+          },
+          {
+            "value": "The question was about a 0/1 Binary grid (connected components). He asked me multiple variations of it, various trade-offs, heavily focused on time and space complexity. He made me solve multiple variations of it and kept on increasing the difficulty level by introducing constraints in the same question. 'Why this and why not this' type questions were asked. I was able to answer 90% of his questions.\nThen at the end of the interview, we went into OS concepts in the same question, by discussing how multithreading or multiprocessing would be better in solving the question. How mutex locks and semaphores would work here. Concurrency vs parallelism. CPU core discussion. It got super tough at the end.",
+            "label": "Technical/Domain & Case-Based Questions",
+            "id": "f3"
+          }
+        ],
+        "id": "s3"
+      },
+      {
+        "kind": "interview",
+        "id": "s4",
+        "title": "PI Round 3 (Manager Round)",
+        "fields": [
+          {
+            "value": "1 (face to face)",
+            "label": "Number of People on Panel",
+            "id": "f1"
+          },
+          {
+            "value": "It was the manager round. It went for 40 minutes. I was the only one among all candidates who had this round; for every other person, the third round was HR.",
+            "label": "Duration & Format",
+            "id": "f2"
+          },
+          {
+            "value": "Purely core subjects (CN and OOP), tough questions from these subjects were asked.\nThen, to evaluate that I didn't cheat in the OA, we discussed the questions I solved in the OA, and he then got satisfied.\nThen, resume discussion again about the Samsung Internship, which organization I would choose if I got offers from both.\nThen he asked me about my favorite project and discussed that. At last, he told me that I was proceeding to the HR round.",
+            "label": "Technical/Domain & Case-Based Questions",
+            "id": "f3"
+          },
+          {
+            "label": "Cross-Questioning & Areas of Focus",
+            "value": "No cross-questioning, technical focus.",
+            "id": "f4"
+          }
+        ]
+      },
+      {
+        "fields": [
+          {
+            "value": "2 (face to face)",
+            "id": "f1",
+            "label": "Number of People on Panel"
+          },
+          {
+            "label": "Duration & Format",
+            "id": "f2",
+            "value": "It was the HR round. It went for 20 minutes. Informal and conversational."
+          },
+          {
+            "label": "HR & Guesstimate Questions, & CV/Resume-Based Questions",
+            "id": "f3",
+            "value": "I was just asked about my introduction. As it was the HR round, I gave the one which had no technical aspect. No resume grilling.\nI was asked about previous round experiences. I was completely honest about how tired I was and the hectic process. (Tip: Don't sugarcoat anything, be real, and address them by their names and not sir/madam.)\nThen I was asked about my hometown, and then he asked me about Bangalore as a place (I had my internship there).\nThen we discussed my reviews from previous rounds; they were very happy. My first interviewer was also on the panel, and he offered me to join his team because he was really impressed. I was also asked about myself outside of professional life, like what I like to do in my free time, etc., and other general questions (nothing technical).\nAt last, they shook hands and congratulated me for having me on board."
+          },
+          {
+            "label": "Cross-Questioning & Areas of Focus",
+            "id": "f4",
+            "value": "No cross-questioning, just conversational and friendly discussion"
+          }
+        ],
+        "kind": "interview",
+        "id": "s5",
+        "title": "PI Round 4 (HR Round)"
+      }
+    ],
+    "company_id": "zomato",
+    "role_name": "Software",
+    "hiring_mode": "On-Campus",
+    "advice": "",
+    "publishedAt": "2026-09-03T18:52:09.642Z",
+    "outcome": "Offer received",
+    "id": "owLFgmFhc5Lxodyc0wQa"
+  },
+  {
+    "role_name": "GET/Trainee",
+    "role_id": "get-trainee",
+    "company_name": "Coca-Cola",
+    "advice": "The one and only advice I would like to give to my juniors is to be confident and trust yourself.",
+    "hiring_mode": "Internship + PPO",
+    "company_id": "DlYzDJc79N1QBJPYZXvL",
+    "overall": "In my third year, I applied to only one company for the internship, and that was Coca-Cola. I was a little bit scared when I got shortlisted for the interview, but eventually, I made it to the end and was selected. My summer internship experience with Coca-Cola was the best, as I learned how automation really works, and I gave my best in my project and eventually got the pre-placement offer.",
+    "batch": "2027",
+    "publishedAt": "2026-09-23T10:44:22.687Z",
+    "official_role": "Graduate Trainee",
+    "outcome": "Offer received",
+    "process_summary": "OA + Personal and Technical Interview",
+    "funnel": "200 to 15 to 4",
+    "sections": [
+      {
+        "kind": "oa",
+        "id": "s1",
+        "fields": [
+          {
+            "value": "Online, 60 Minutes",
+            "label": "Format & Duration",
+            "id": "f1"
+          },
+          {
+            "value": "Core questions of instrumentation and electrical + aptitude",
+            "id": "f2",
+            "label": "Types of Questions"
+          },
+          {
+            "value": "PLC, SCADA, Industrial instrumentation, PID controller, Power Electronics, Microprocessor and microcontroller, Electronics and electrical measurement, Data acquisition and system design",
+            "id": "f3",
+            "label": "Questions Asked & How I Solved Them"
+          },
+          {
+            "label": "Result / Cutoff",
+            "value": "7.00 CGPA cut",
+            "id": "f4"
+          }
+        ],
+        "title": "Online Assessment"
+      },
+      {
+        "fields": [
+          {
+            "value": "3 interviewers (2 technical + 1 HR)",
+            "id": "f1",
+            "label": "Panel"
+          },
+          {
+            "label": "Duration & Format",
+            "id": "f2",
+            "value": "35 Minutes"
+          },
+          {
+            "value": "What is a PID controller and how do we implement Ziegler-Nichols, What is a bimetallic thermistor, How have you implemented the electrical HV and LV circuit in your Oorja Go-kart competition, What is a diaphragm, what is a gasket, explain different types of valves, What is a Human Machine Interface, previous internship experience, what all tools and software used in previous internship.",
+            "label": "Technical & Case Questions",
+            "id": "f3"
+          },
+          {
+            "value": "Introduce yourself, Tell about your family and where you are from, why do you want to join Coca-Cola, are you open for relocation, what is your favorite subject in engineering, your favorite product of Coca-Cola, how will you describe the product.",
+            "id": "f4",
+            "label": "HR & CV Questions"
+          },
+          {
+            "label": "Cross-questioning & Focus Areas",
+            "value": "Focus was on core subjects knowledge and behavior overall.",
+            "id": "f5"
+          }
+        ],
+        "id": "s2",
+        "kind": "interview",
+        "title": "Interview Round 1"
+      }
+    ],
+    "id": "pzCJu5kQIZ8aQzeVchFC"
+  },
+  {
+    "advice": "",
+    "overall": "",
+    "batch": "2027",
+    "company_id": "zomato",
+    "role_id": "software",
+    "company_name": "Zomato",
+    "publishedAt": "2026-09-03T18:52:17.346Z",
+    "sections": [
+      {
+        "title": "Written Test / Online Assessment",
+        "kind": "oa",
+        "fields": [
+          {
+            "value": "Online, proctored, HackerRank, 3 DSA (Easy, Med, Hard), 15 MCQ (CS Fundamentals)",
+            "label": "Format & Duration",
+            "id": "f1"
+          },
+          {
+            "id": "f2",
+            "value": "3 DSA, 15 Fundamentals like OS, DBMS, BASIC AWS, CN",
+            "label": "Types of Questions Asked"
+          },
+          {
+            "label": "Questions Asked",
+            "id": "f3",
+            "value": "1 Math-heavy formula-derived type DSA, 1 implementation-heavy question related to MEX (Min Excluded), 1 SCC question (Kosaraju), MCQs on OS scheduling, AWS S3, CDN, deadlock, graph theory"
+          }
+        ],
+        "id": "s1"
+      },
+      {
+        "fields": [
+          {
+            "value": "1",
+            "id": "f1",
+            "label": "Number of People on Panel"
+          },
+          {
+            "label": "Duration & Format",
+            "value": "1.25 hrs, FORMAL, tech-heavy, no cultural questions asked",
+            "id": "f2"
+          },
+          {
+            "label": "Technical/Domain & Case-Based Questions",
+            "value": "Questions Asked: Pillars of OOPs, mutex problems and basic pseudocode, ACID properties, types of DBs, HLD, partitioning, distributed systems, TCP UDP differences and uses, threads process, stack heap, normalization till BCNF with examples, transactions, binary search on matrix DSA questions, implement queue using different data structures and trade-offs, resume project explanation, SMTP, APIs and types, second highest salary all ways using subquery, limit offset and window function, virtual table and functions, activation functions, RAG, MCP. Explained some on my own and some with some clarification from the interviewer, wrote pseudocodes and explained on a sheet of paper and constantly asked follow-up and clarification questions.",
+            "id": "f3"
+          },
+          {
+            "label": "HR & Guesstimate Questions, & CV/Resume-Based Questions",
+            "value": "Project and internship explanation, no HR questions",
+            "id": "f4"
+          },
+          {
+            "label": "Cross-Questioning & Areas of Focus",
+            "value": "Full technical, quite less DSA, OS and DBMS and high-level design-focused round",
+            "id": "f5"
+          }
+        ],
+        "id": "s2",
+        "title": "PI Round 1",
+        "kind": "interview"
+      },
+      {
+        "fields": [
+          {
+            "value": "1",
+            "id": "f1",
+            "label": "Number of People on Panel"
+          },
+          {
+            "id": "f2",
+            "value": "1.25 hrs, technical round",
+            "label": "Duration & Format"
+          },
+          {
+            "value": "Questions Asked: Check palindrome linked list O(1), rabbit hare algorithm, edge cases, cycle detection using rabbit hare, adding mutex to these DSA questions, critical section problem, dining philosopher, 0-1 knapsack, Book My Show LLD along with ER diagrams, basic HLD of Redis, CAP algorithm, pub subs, message brokers, etc. Explained some on my own and some with some clarification from the interviewer, wrote pseudocodes and explained on a sheet of paper and constantly asked follow-up and clarification questions.",
+            "id": "f3",
+            "label": "Technical/Domain & Case-Based Questions"
+          },
+          {
+            "label": "Cross-Questioning & Areas of Focus",
+            "id": "f4",
+            "value": "Full technical, DSA plus LLD"
+          }
+        ],
+        "id": "s3",
+        "kind": "interview",
+        "title": "PI Round 2"
+      },
+      {
+        "kind": "interview",
+        "title": "PI Round 3",
+        "fields": [
+          {
+            "value": "3",
+            "label": "Number of People on Panel",
+            "id": "f1"
+          },
+          {
+            "label": "Duration & Format",
+            "value": "30 minutes, HR",
+            "id": "f2"
+          },
+          {
+            "id": "f3",
+            "value": "Internship experience, some good and bad things about previous companies, situation where you worked with your team and also conflict resolution, hobbies and schedule, availability, etc.",
+            "label": "HR & Guesstimate Questions, & CV/Resume-Based Questions"
+          },
+          {
+            "value": "HR, non-technical",
+            "id": "f4",
+            "label": "Cross-Questioning & Areas of Focus"
+          }
+        ],
+        "id": "s4"
+      }
+    ],
+    "outcome": "",
+    "hiring_mode": "On-Campus",
+    "role_name": "Software",
+    "funnel": "",
+    "official_role": "SDE",
+    "process_summary": "OA + Tech PI + Tech PI 2 + HR",
+    "id": "tLa1XuLKmOVRk9AYqzVU"
+  },
+  {
+    "publishedAt": "2026-09-23T10:43:58.965Z",
+    "funnel": "800->44->23->13(5 ppis from Amex Challenge)",
+    "hiring_mode": "Internship + PPO",
+    "sections": [
+      {
+        "kind": "oa",
+        "title": "Online Assessment",
+        "fields": [
+          {
+            "label": "Format & Duration",
+            "id": "f1",
+            "value": "The OA had three sections, and each section had a separate time limit."
+          },
+          {
+            "value": "As far as I remember, it included verbal ability, mathematical reasoning, and basic Python and SQL questions. The catch was that many people hadn't read the instructions properly, and there was negative marking, so it's important to read them carefully.",
+            "id": "f2",
+            "label": "Types of Questions"
+          },
+          {
+            "value": "Please prepare for company-specific questions from websites such as Geeks for Geeks to be prepared for OA, and also CTD resources are helpful, and now tiet prep.\nI used to practice company-specific puzzles and OA questions a lot to get used to the pattern.",
+            "id": "f3",
+            "label": "Questions Asked & How I Solved Them"
+          },
+          {
+            "value": "5 students were selected directly through the Amex Challenge. There was no GD for them; they directly went to the technical interview.\nApart from that, 44 students were shortlisted through the OA. For OA the CGPA cutoff was 9.05.",
+            "id": "f4",
+            "label": "Result / Cutoff"
+          }
+        ],
+        "id": "s1"
+      },
+      {
+        "kind": "gd",
+        "id": "s2",
+        "title": "Group Discussion",
+        "fields": [
+          {
+            "label": "Panel",
+            "value": "One sir and one ma'am",
+            "id": "f1"
+          },
+          {
+            "label": "Topics Given",
+            "value": "The impact of online education on youth",
+            "id": "f2"
+          },
+          {
+            "label": "How It Went",
+            "value": "It was great, but remember to practice from CTD, YouTube, and even the Profcom course helped me, as I already knew the basic rules of GD that make you qualify it.",
+            "id": "f3"
+          }
+        ]
+      },
+      {
+        "kind": "interview",
+        "fields": [
+          {
+            "label": "Panel",
+            "id": "f1",
+            "value": "My panel was the same ma'am from GD-she is an alumna of Thapar working as a manager of product development in Amex."
+          },
+          {
+            "label": "Duration & Format",
+            "id": "f2",
+            "value": "Approximately 40 minutes, conducted in person."
+          },
+          {
+            "value": "The technical round depended on the company and the skills mentioned in the resume.\n\nQuestions were asked based on the technical skills listed. For example, candidates who mentioned SQL and DSA were asked questions related to those skills.\nIn my case, I had mentioned AI/ML applications in electronics projects along with Python, so I was asked about machine learning and my projects.\nI was asked to explain one of my favorite projects, including its purpose and use case. The interviewer wanted to understand my thinking behind the project, rather than just the models used.\nI was also asked about one of my Walmart Hackathon projects.\nOne guesstimate question was asked: Estimate the number of iPhones in Patiala.\nI was also asked puzzles, such as the 2-bulb problem. Company-specific puzzles can be practiced through GeeksforGeeks.",
+            "label": "Technical & Case Questions",
+            "id": "f3"
+          },
+          {
+            "label": "HR & CV Questions",
+            "value": "The interview also included resume-based, behavioral, and situational questions.\n\nQuestions about my projects and the technologies mentioned in my resume.\nQuestions about my societies and extracurricular involvement.\nQuestions about a particular situation and how I handled it.\nQuestions about challenges in technical group projects and how I resolved them.\nA question comparing cash cards and credit cards.\nA Tiffany-related question: if Tiffany and Co. decides to open a store in Patiala, what factors will they keep in mind?\nQuestions about my interest in Machine Learning, as it was mentioned in my projects.\n\nIt is important to know your resume thoroughly and not mention skills you cannot confidently discuss. I removed Java from my resume the night before because I could no longer remember it properly.",
+            "id": "f4"
+          },
+          {
+            "id": "f5",
+            "value": "The interviewer seemed to assess how well I understood my projects, my reasoning, and how I handled unexpected questions.\n\nProject understanding: Be prepared to explain the purpose, use case, approach, and reasoning behind your projects. The interviewer wants to understand your thinking, not just the model or technology used.\nMachine Learning: Since I mentioned ML in my projects, the interviewer asked me about it in greater detail.\nSituational reasoning: Prepare for questions involving conflicts, challenges, and how you respond to different situations such as your role in societies.\nUnexpected questions: Be professional and prepared to handle questions that may be phrased in unexpected or tricky ways.\nGuesstimates: Learn a structured approach to solving estimation questions. I prepared for these through YouTube the night before.\nPuzzles: Practice company-specific puzzles on GeeksforGeeks.\n\nI learned two frameworks the night before to help answer situational questions:\n\nSTAR Method: Situation, Task, Action, Result.\nPESTLE Method: Political, Economic, Social, Technological, Legal, and Environmental factors.",
+            "label": "Cross-questioning & Focus Areas"
+          }
+        ],
+        "title": "Technical Round",
+        "id": "s3"
+      },
+      {
+        "title": "HR",
+        "kind": "custom",
+        "id": "s4",
+        "fields": [
+          {
+            "label": "Panel",
+            "id": "f1",
+            "value": "He is a VP at Amex"
+          },
+          {
+            "id": "f2",
+            "value": "Approximately 45 minutes, conducted in person.\n\nThe HR round was conducted by a VP and was the final and most important stage of the interview process. Around half of the 23 candidates who had reached this stage were still in the process.\nThe HR round mainly focused on resume discussion, behavioral questions, and problem-solving.\n\nThe interviewer asked me to summarize my resume and explain my experiences in detail.\nI was asked questions about my projects, societies, and overall background.\nThe interviewer asked me to explain particular situations and how I would handle them.\nQuestions were also asked to understand my approach to problems and decision-making.\nHR & CV QUESTIONS\nTell me about yourself / summarize your resume.\nExplain your projects and experiences in detail.\nTell me about your society involvement.\nTell me about a particular situation and how you handled it.\nTell me three reasons why we should not hire you.\n\nThe interviewer also asked several questions that seemed contradictory or were framed as traps. It is important to remain polite, professional, and composed while answering.",
+            "label": "Overall"
+          },
+          {
+            "label": "CROSS-QUESTIONING & FOCUS AREAS",
+            "value": "The interviewer seemed to focus on how I think about problems, how I respond to difficult questions, and how well I understand my own experiences.\n\nResume depth: Be ready to discuss every part of your resume in detail.\nProblem-solving: The interviewer wants to understand your thinking and approach to problems.\nContradictory questions: Prepare for questions that may seem conflicting or designed to test your consistency.\nProfessionalism: Be polite, diplomatic, and maintain your best behavior throughout the interview.\nAuthenticity: Be professional without pretending to be someone you are not.\nCompany knowledge: Research the company thoroughly so that you can answer questions about it confidently.\n\nThe question, \"Tell me three reasons why we should not hire you,\" was asked as a trap question. Be prepared for similar unexpected behavioral questions.",
+            "id": "f3"
+          },
+          {
+            "id": "f4",
+            "value": "This was the final HR round, so be sure to prepare both your resume and the company. Stay calm, think before answering, and handle tricky questions professionally.\nKnow your resume thoroughly and research the company well. Be prepared to explain everything you have mentioned, including projects, skills, achievements, and experiences.",
+            "label": "Advice"
+          }
+        ]
+      }
+    ],
+    "company_name": "American Express",
+    "process_summary": "OA+GD+Technical+HR",
+    "role_name": "Product",
+    "outcome": "Offer received",
+    "official_role": "Product Development – Credit and Fraud Risk (CFR)",
+    "advice": "Many companies invite Thapar alumni for interviews if they already have alumni working there. In my case, I had a Thapar alumna as my interviewer in both the technical round and GD.\n\nIt is also useful to ask thoughtful questions during the interview to show curiosity about the company, role, and learning opportunities. Always remember to be honest; never lie. It's better to know a little less than to overestimate things.",
+    "role_id": "product",
+    "company_id": "american-express",
+    "overall": "Always enjoy the process, and try to explain as much as possible in a polite way. Never compare yourself with others; this approach helped me as I was calm and I knew that I was here to learn first as it was my first on-campus interview. I just went in and followed my path.",
+    "batch": "2027",
+    "id": "ydwTASTC7clqu1U7Dvq1"
+  }
+]
