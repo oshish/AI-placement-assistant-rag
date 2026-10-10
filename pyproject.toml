@@ -1,4 +1,4 @@
-﻿
+
 [build-system]
 requires = ["hatchling","hatch-vcs"]
 build-backend = "hatchling.build"
@@ -27,7 +27,10 @@ classifiers = [
     "Operating System :: POSIX",
     "Programming Language :: Unix Shell",
 ]
-dependencies = ["click"]
+dependencies = [
+    "click",
+    "sentence-transformers",
+]
 
 [project.urls]
 Homepage = "https://github.com/tiet-ucs503/ucs503p-202627odd-template"
