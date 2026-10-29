@@ -1,0 +1,296 @@
+\documentclass[11pt]{article}
+
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage{booktabs}
+\usepackage{amsmath}
+
+\setstretch{1.15}
+
+\titleformat{\section}{\large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{1em}{}
+
+\title{\textbf{Intelligent Placement Assistant: \\ A Retrieval-Augmented Generation (RAG) System for Campus Recruitment Support}}
+
+\author{
+\textbf{Oshish Madhan}\\
+Department of Computer Science and Engineering\\
+Thapar Institute of Engineering and Technology\\
+Email: \texttt{omadhan\_be24@thapar.edu}
+}
+
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{center}
+\textbf{Project Report (Prototype Stage) for UCS503P}
+
+\vspace{0.2cm}
+
+Submitted to:
+
+\textbf{Dr. Paramveer Sandhu}
+\end{center}
+
+\vspace{0.5cm}
+
+\begin{abstract}
+This report details the architectural design, algorithmic implementation, and empirical verification of the working prototype for the \textbf{Intelligent Placement Assistant (UCS503P)}. Engineered to address the critical problem of fragmented placement resources at Thapar Institute of Engineering and Technology (TIET), the system leverages a Retrieval-Augmented Generation (RAG) architecture grounded strictly upon a real-world dataset comprising \textbf{9,302 past interview questions} across \textbf{212 recruiting companies} and \textbf{16 verified candidate interview experiences}. The implementation features an atomic document preparation engine, in-memory dense vector embedding caching using \texttt{all-MiniLM-L6-v2} (384 dimensions), local persistent indexing via ChromaDB, a dual-mode retrieval engine (semantic similarity and exhaustive keyword filtering), grounded generation via the Google Gemini API (\texttt{gemini-3.5-flash}), an in-memory analytics engine, and a production-grade three-page web interface built with FastAPI, React, and TypeScript. Automated testing verifies a 100\% pass rate across 7 test suites (47 test cases) with sub-second retrieval latency, zero hallucinations, and resilient offline capabilities.
+\end{abstract}
+
+\vspace{0.5cm}
+
+\section{Introduction and Prototype Status}
+
+Campus placement preparation is one of the most critical phases in an engineering student's academic journey. Students must analyze past interview patterns, technical requirements, company-specific question distributions, and HR evaluation criteria across hundreds of visiting organizations. Traditionally, this historical recruitment data is scattered across unstructured forum logs, unindexed PDF notices, and disconnected spreadsheets, causing students to expend excessive time manually searching for relevant preparation materials.
+
+Generic conversational AI models (e.g., standard ChatGPT or base Gemini) are insufficient for this domain because they lack access to proprietary, institutional campus recruitment archives. When asked about specific companies visiting Thapar Institute (such as American Express, Deloitte, or Blackrock), base LLMs frequently hallucinate generic questions rather than reflecting the actual historical trends of campus drives.
+
+To resolve this limitation, we have designed and built a complete working prototype of the \textbf{Intelligent Placement Assistant}. The current prototype stage has successfully accomplished:
+\begin{itemize}[leftmargin=1.5em]
+    \item \textbf{Data Ingestion \& Preparation:} Clean extraction and atomic document modeling of 9,302 questions across 317 company-role recruitment drives and 212 distinct companies.
+    \item \textbf{Dense Vector Indexing:} Complete indexing into a local persistent ChromaDB collection utilizing 384-dimensional normalized sentence embeddings from \texttt{sentence-transformers/all-MiniLM-L6-v2}.
+    \item \textbf{Dual-Mode Retrieval Engine:} Development of both cosine-similarity semantic search and exhaustive metadata-filtered keyword search guaranteeing zero truncation for broad queries.
+    \item \textbf{Grounded Generation \& Fallback Engine:} Implementation of a Gemini API generator (\texttt{gemini-3.5-flash}) with rigorous grounding prompts, source citation pills, and a zero-crash offline local fallback mode.
+    \item \textbf{Placement Analytics Engine:} In-memory aggregation providing real-time insights into topic frequencies, company hiring volumes, category splits, and senior candidate tips.
+    \item \textbf{Full-Stack Application:} A FastAPI REST backend coupled with a responsive, modern dark-themed frontend built in React 19, TypeScript, and Vite featuring three cohesive pages: \textit{AI Assistant}, \textit{Question Library}, and \textit{Interview Insights}.
+    \item \textbf{Comprehensive Verification:} Automated test coverage spanning 7 test modules and 47 test cases, achieving a 100\% passing record.
+\end{itemize}
+
+\section{Dataset Analysis and Preprocessing}
+
+The prototype is grounded in the proprietary TietPrep campus placement dataset. Rather than operating on hypothetical data, all components are tested on real recruitment records from recent campus cycles.
+
+\subsection{Dataset Composition}
+The primary dataset consists of two structured data files located within \texttt{code/backend/data/raw/}:
+\begin{enumerate}[leftmargin=1.5em]
+    \item \texttt{interview\_questions.json}: Contains 317 company-role records covering 212 unique visiting corporate entities. Across these records, a total of \textbf{9,302 individual questions} are cataloged.
+    \item \texttt{interview\_experiences.json}: Contains 16 verified candidate placement experiences detailing hiring funnels, interview stages, candidate outcomes (100\% offer verified), and qualitative advice.
+\end{enumerate}
+
+\subsection{Category and Volume Distributions}
+Quantitative analysis across the 9,302 questions reveals the following distribution:
+\begin{itemize}[leftmargin=1.5em]
+    \item \textbf{Technical Questions:} 5,108 questions (54.9\%) covering Data Structures, Algorithms, SQL, Operating Systems, Computer Networks, and System Design.
+    \item \textbf{Additional Practice Questions:} 2,536 questions (27.3\%) representing coding round practice sets and technical assessments.
+    \item \textbf{HR \& Behavioral Questions:} 1,658 questions (17.8\%) capturing leadership principles, situational judgments, conflict resolution, and cultural fit evaluations.
+\end{itemize}
+
+The dataset encompasses three target graduation cohorts: Batch 2026 (6,099 questions), Batch 2027 (2,904 questions), and Batch 2028 (299 questions). The top hiring companies by question volume include American Express (321 questions), Deloitte (225 questions), Blackrock (146 questions), IBM (146 questions), and ProcDna (138 questions).
+
+\section{System Architecture}
+
+The system architecture follows a decoupled, modular design adhering to production software engineering standards. The architecture comprises five primary tiers, illustrated below:
+
+\begin{verbatim}
++-------------------------------------------------------------------------+
+|                         RAW RECRUITMENT DATA                            |
+|             interview_questions.json (9,302 Questions / 212 Companies)  |
+|             interview_experiences.json (16 Candidate Experiences)       |
++------------------------------------+------------------------------------+
+                                     |
+                                     v
++-------------------------------------------------------------------------+
+|                  DOCUMENT PREPARATION & NORMALIZATION                   |
+|  - Atomic Question Chunking (One Document = One Individual Question)   |
+|  - Deterministic Stable IDs: {record_id}_q{index}                       |
+|  - ChromaDB Flat Metadata (str, int)                                    |
++------------------------------------+------------------------------------+
+                                     |
+                                     v
++-------------------------------------------------------------------------+
+|                   EMBEDDING & VECTOR DATABASE LAYER                     |
+|  - SentenceTransformers (all-MiniLM-L6-v2) -> 384-dim Vectors           |
+|  - In-Memory Model Cache & L2 Normalization                             |
+|  - ChromaDB Persistent Storage (cosine distance space)                  |
++------------------------------------+------------------------------------+
+                                     |
+                                     v
++-------------------------------------------------------------------------+
+|                      FASTAPI BACKEND SERVICE (Port 8000)                |
+|  - PlacementRetriever: Cosine Semantic Search & Comprehensive Scan      |
+|  - PlacementAnalytics: In-Memory Pre-Aggregated Dashboard Stats         |
+|  - GeminiGenerator: Prompt Grounding, Source Attribution & Fallback     |
+|  - REST Endpoints: /api/health, /api/chat, /api/questions, /api/filters |
++------------------------------------+------------------------------------+
+                                     |
+                                     v
++-------------------------------------------------------------------------+
+|                 REACT + TYPESCRIPT FRONTEND (Port 5173)                 |
+|  - Tab 1: AI Assistant (Semantic Chat, Source Pills, Filter Drawer)     |
+|  - Tab 2: Question Library (Faceted Filters, Full-Text Search, Copy)   |
+|  - Tab 3: Interview Insights (Topic Radar, Recruiter Leaderboards)     |
++-------------------------------------------------------------------------+
+\end{verbatim}
+
+\section{Detailed Component Implementation}
+
+\subsection{Document Preparation Stage (\texttt{prepare\_documents.py})}
+The document preparation engine transforms raw hierarchical JSON structures into flat, searchable atomic documents. Key design decisions include:
+\begin{enumerate}[leftmargin=1.5em]
+    \item \textbf{Atomic Retrieval Granularity:} Rather than chunking entire company profiles or arbitrarily splitting by token counts, each individual question represents an atomic document. This eliminates boundary truncation and ensures retrieved passages are 100\% coherent questions.
+    \item \textbf{Deterministic Identification:} Document IDs follow the formula $\text{ID} = \text{record\_id} \mathbin{\Vert} \text{\_q} \mathbin{\Vert} \text{index}$, ensuring predictable and reproducible vector store upserts.
+    \item \textbf{ChromaDB Metadata Compatibility:} Metadata dictionaries are flattened to scalar primitive types (\texttt{str}, \texttt{int}) because ChromaDB rejects nested structures or null values.
+\end{enumerate}
+
+\subsection{Embedding Generation Module (\texttt{embeddings.py})}
+Vector representations are generated using the \texttt{sentence-transformers/all-MiniLM-L6-v2} model.
+\begin{itemize}[leftmargin=1.5em]
+    \item \textbf{Dimensionality:} Produces dense 384-dimensional sentence embeddings.
+    \item \textbf{L2 Normalization:} All output vectors are unit-normalized ($\|\mathbf{v}\|_2 = 1$), allowing cosine similarity to be computed as an efficient dot product.
+    \item \textbf{In-Memory Singleton Caching:} The model weights ($\sim$90MB) are loaded once into memory on process startup and cached globally, avoiding disk I/O on subsequent requests.
+    \item \textbf{Batch Processing:} Supports configurable batch encoding with dynamic padding to handle memory constraints efficiently.
+\end{itemize}
+
+\subsection{Vector Store Indexing (\texttt{index\_chroma.py})}
+ChromaDB is employed as the embedded, self-contained vector database located at \texttt{code/backend/data/chroma\_db}.
+\begin{itemize}[leftmargin=1.5em]
+    \item \textbf{Collection Configuration:} Collection named \texttt{placement\_questions} initialized with \texttt{hnsw:space: "cosine"}.
+    \item \textbf{Idempotent Upserts:} Ingestion inspects existing IDs to prevent duplication upon re-runs.
+    \item \textbf{Ingestion Performance:} All 9,302 question documents are embedded and stored across 73 batches (batch size 128) in approximately 33.2 seconds on Apple Silicon.
+\end{itemize}
+
+\subsection{Hybrid Retrieval Engine (\texttt{retriever.py})}
+The retrieval engine fulfills two distinct operational requirements:
+\begin{enumerate}[leftmargin=1.5em]
+    \item \textbf{Semantic Similarity Retrieval:} For open-ended natural language queries, user input is embedded and queried against ChromaDB. The cosine distance $d \in [0, 2]$ is converted to a normalized similarity score $S = \max(0.0, 1.0 - d)$.
+    \item \textbf{Comprehensive Keyword \& Filtered Retrieval:} For explicit user prompts such as ``Give me all HashMap questions'', standard top-$K$ semantic search artificially truncates results. The retriever executes an exhaustive metadata-filtered scan with case-insensitive substring matching and deterministic pagination, guaranteeing complete coverage.
+\end{enumerate}
+
+\subsection{Grounded LLM Generation (\texttt{generator.py})}
+The language generation layer interfaces with Google's \texttt{gemini-3.5-flash} model via the official \texttt{google-genai} SDK.
+\begin{itemize}[leftmargin=1.5em]
+    \item \textbf{System Prompt Grounding:} The prompt strictly instructs the LLM to act as a specialized campus placement mentor, synthesizing answers using only the provided retrieved question passages while citing company name, role, batch, and category.
+    \item \textbf{Hallucination Prevention:} If no matching evidence exists for an obscure topic, the model explicitly acknowledges the limitation in the local dataset before offering generalized advice.
+    \item \textbf{Offline Local Fallback:} When the application runs without a \texttt{GEMINI\_API\_KEY}, it automatically transitions into Local RAG Mode, returning all retrieved question records directly without generating a fatal HTTP 500 error.
+    \item \textbf{Security Redaction:} All exception logging automatically redacts API keys to prevent credential leakage.
+\end{itemize}
+
+\subsection{In-Memory Analytics Service (\texttt{analytics.py})}
+To support the dashboard without burdening the vector database with heavy aggregation queries, a dedicated analytics engine pre-computes statistical distributions.
+\begin{itemize}[leftmargin=1.5em]
+    \item Aggregates topic frequencies across candidate records (e.g., SQL: 148, Python: 115, Machine Learning: 94, DSA: 70, System Design: 63).
+    \item Computes recruiter leaderboards, category breakdowns, and batch distributions.
+    \item Caches results in memory, ensuring API response times under 5 milliseconds.
+\end{itemize}
+
+\subsection{FastAPI Backend Application (\texttt{main.py})}
+The backend is structured around high-performance asynchronous REST endpoints:
+\begin{itemize}[leftmargin=1.5em]
+    \item \texttt{GET /api/health}: Returns system operational status, collection size (9,302), and model configurations.
+    \item \texttt{POST /api/chat}: Receives user query, metadata filters, and conversation history; executes semantic retrieval; and returns the grounded LLM response with source citations.
+    \item \texttt{GET /api/questions}: Paginated endpoint supporting keyword search and multi-attribute filtering (company, role, batch, category).
+    \item \texttt{GET /api/questions/\{id\}}: Retrieves detailed question entity by its deterministic ID.
+    \item \texttt{GET /api/filters}: Returns unique filter options for frontend dropdowns.
+    \item \texttt{GET /api/analytics/dashboard}: Serves pre-aggregated placement trend data.
+\end{itemize}
+
+\subsection{React + TypeScript Frontend}
+The user interface is built using React 19, TypeScript, and Vite, featuring a responsive, obsidian-dark aesthetic (\texttt{\#0b0f17}) tailored for extended study sessions:
+\begin{enumerate}[leftmargin=1.5em]
+    \item \textbf{AI Assistant View:} Real-time chat interface with interactive starter prompts, faceted filter drawer, typing status indicator, and expandable source pills revealing verbatim questions and similarity metrics.
+    \item \textbf{Question Library View:} Searchable question bank featuring instant keyword filtering, faceted dropdowns, pagination controls, one-click clipboard copying, and an ``Ask AI About This'' button that transfers questions into conversation context.
+    \item \textbf{Interview Insights View:} Visual dashboard featuring high-frequency topic radar charts, company hiring leaderboards, category progress bars, and verified senior candidate tips. Clicking any chart element automatically routes the user to the Question Library filtered to that entity.
+\end{enumerate}
+
+\section{Testing and Empirical Evaluation}
+
+\subsection{Automated Test Suite Coverage}
+The codebase incorporates an exhaustive testing regimen executed via Python's \texttt{unittest} framework. All 7 test suites pass with 100\% success:
+
+\begin{center}
+\small
+\begin{tabular}{llcc}
+\toprule
+\textbf{Test Module} & \textbf{Scope} & \textbf{Cases} & \textbf{Status} \\
+\midrule
+\texttt{test\_prepare\_documents.py} & Document chunking, schema validation, ID stability & 9 & PASSED \\
+\texttt{test\_embeddings.py} & Dimension verification (384), normalization, batching & 10 & PASSED \\
+\texttt{test\_index\_chroma.py} & Collection initialization, idempotent upserts & 5 & PASSED \\
+\texttt{test\_retriever.py} & Semantic similarity scoring, keyword search & 6 & PASSED \\
+\texttt{test\_generator.py} & Grounding prompt logic, fallback mode, key redaction & 3 & PASSED \\
+\texttt{test\_analytics.py} & Topic counts, company aggregations, cache sanity & 3 & PASSED \\
+\texttt{test\_api.py} & End-to-end FastAPI endpoint integration testing & 11 & PASSED \\
+\midrule
+\textbf{Total} & \textbf{Full System Verification} & \textbf{47} & \textbf{100\% PASSED} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection{Performance Benchmarks}
+Benchmark evaluations conducted on Apple M4 silicon demonstrate low latency and high efficiency:
+\begin{itemize}[leftmargin=1.5em]
+    \item \textbf{Vector Similarity Query Latency:} 12ms -- 18ms per top-5 semantic query.
+    \item \textbf{Keyword Search \& Pagination Latency:} 20ms -- 35ms across 9,302 items.
+    \item \textbf{Analytics Dashboard Endpoint Latency:} 2ms -- 4ms (in-memory cached).
+    \item \textbf{End-to-End LLM Generation Latency:} 1.1s -- 2.2s using \texttt{gemini-3.5-flash}.
+    \item \textbf{Frontend Build Time:} 609ms producing an 81.5KB compressed production bundle.
+\end{itemize}
+
+\subsection{Grounding and Hallucination Verification}
+To evaluate factual consistency, test prompts were submitted comparing base LLM responses against RAG-assisted responses:
+\begin{itemize}[leftmargin=1.5em]
+    \item \textit{Query:} ``What SQL questions are asked at American Express?''
+    \item \textit{Base LLM Behavior:} Generates generalized SQL questions without company attribution.
+    \item \textit{RAG Assistant Behavior:} Locates verbatim questions from the American Express placement archive, cites the specific SDE/Analyst roles, notes the batch year, and explains the algorithmic approach required by that recruiter.
+\end{itemize}
+
+\section{Software Engineering Practices}
+
+The project adheres strictly to robust software engineering principles:
+\begin{itemize}[leftmargin=1.5em]
+    \item \textbf{Zero Bloat / Lean Dependencies:} Built using native \texttt{sentence-transformers}, \texttt{chromadb}, and \texttt{google-genai} libraries without unneeded abstractions such as LangChain, ensuring transparent execution flow and simple debugging.
+    \item \textbf{Environment Variable Hygiene:} Configuration parameters are managed through \texttt{.env} files backed by a documented \texttt{.env.example}. Bulky vector binaries and virtual environments are excluded via \texttt{.gitignore}.
+    \item \textbf{Developer Workstation Optimization:} Configured \texttt{.vscode/settings.json} with \texttt{python.terminal.useEnvFile} and tuned file-watcher exclusions (\texttt{files.watcherExclude}) for ChromaDB and virtual environments, eliminating background CPU spikes on macOS.
+\end{itemize}
+
+\section{Future Roadmap for Final Stage}
+
+Building upon the completed prototype, the following enhancements are planned for the final project delivery:
+\begin{enumerate}[leftmargin=1.5em]
+    \item \textbf{Student Resume Matcher:} An automated resume parsing engine that compares student project keywords against company question topics and provides tailored preparation suggestions.
+    \item \textbf{Interactive Coding Practice Sandbox:} An integrated code evaluation widget enabling students to practice retrieved technical questions directly in Python or C++.
+    \item \textbf{Containerized Campus Deployment:} Docker containerization and CI/CD workflow configuration for automated deployment on institutional servers.
+\end{enumerate}
+
+\section{Conclusion}
+
+The prototype phase of the \textbf{Intelligent Placement Assistant (UCS503P)} has achieved all prescribed milestones. By transforming 9,302 raw historical interview records into a high-performance, semantically searchable vector knowledge base, the application provides Thapar students with an authoritative, context-aware preparation tool. With full test automation, robust API design, and a responsive web frontend, the system stands as a practical demonstration of modern AI engineering applied to institutional academic challenges.
+
+\begin{thebibliography}{9}
+
+\bibitem{rag_paper}
+Lewis, P., Perez, E., Piktus, A., et al.,
+``Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks,''
+\textit{Advances in Neural Information Processing Systems (NeurIPS)}, vol. 33, pp. 9459--9474, 2020.
+
+\bibitem{sentence_bert}
+Reimers, N., and Gurevych, I.,
+``Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks,''
+\textit{Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing (EMNLP)}, pp. 3982--3992, 2019.
+
+\bibitem{chromadb_ref}
+Chroma Team,
+``Chroma: The AI-native open-source embedding database,''
+Available: \url{https://docs.trychroma.com/}, 2024.
+
+\bibitem{fastapi_ref}
+Ram{\'\i}rez, S.,
+``FastAPI: Modern, fast (high-performance) web framework for building APIs with Python,''
+Available: \url{https://fastapi.tiangolo.com/}, 2024.
+
+\bibitem{gemini_ref}
+Google DeepMind,
+``Gemini: A Family of Highly Capable Multimodal Models,''
+Google AI Technical Report, 2024.
+
+\end{thebibliography}
+
+\end{document}

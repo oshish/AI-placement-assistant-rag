@@ -465,4 +465,15 @@ TSWLatexianTemp*
 # option is specified. Footnotes are the stored in a file with suffix Notes.bib.
 # Uncomment the next line to have this generated file ignored.
 #*Notes.bib
- 
+
+# Project Specific Ignores
+.env
+.env.*
+!.env.example
+.venv/
+node_modules/
+code/frontend/node_modules/
+code/frontend/dist/
+code/backend/data/chroma_db/
+*.log
+.DS_Store

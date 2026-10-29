@@ -30,6 +30,12 @@ classifiers = [
 dependencies = [
     "click",
     "sentence-transformers",
+    "chromadb",
+    "fastapi",
+    "uvicorn",
+    "pydantic",
+    "google-genai",
+    "python-dotenv",
 ]
 
 [project.urls]
